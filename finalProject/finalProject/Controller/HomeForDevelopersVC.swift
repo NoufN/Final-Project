@@ -6,24 +6,135 @@
 //
 
 import UIKit
+import Firebase
 
-class HomeForDevelopersVC: UIViewController {
+class HomeForDevelopersVC: UIViewController  ,UITableViewDelegate, UITableViewDataSource{
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    var projects = [Projects]()
+ 
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var project: UISegmentedControl!
+    var selected : Projects? = nil
+  
+    
+    let db = Firestore.firestore()
+    let email = Auth.auth().currentUser?.email
+
+    
+//   var projects = ""
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadAllProjects()
+        tableView.delegate = self
+        tableView.dataSource = self
+ 
+      
+    
+ 
     }
-    */
+    override func viewWillAppear(_ animated: Bool) {
+        loadAllProjects()
+    }
+//    @IBAction func indexChanged(sender: UISegmentedControl) {
+//        switch project.selectedSegmentIndex
+//        {
+//        case 0:
+//        projects = "Projects"
+//
+//        case 1:
+//            projects  = "My Project "
+//
+//        default:
+//            break;
+//        }
+//    }
 
+    
+    
+    func  loadAllProjects(){
+        projects.removeAll()
+        db.collection("Projects").getDocuments { (querySnapshot, error) in
+            
+            if let err = error {
+                print("Error getting documents: \(err.localizedDescription)")
+            } else {
+                self.projects.removeAll()
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+             
+                    
+//                    self.projects.append(Projects(nameProject:data["Title"] as? String ?? "", detailsProject: data["Details"] as? String ?? "", Deadline: data["Deadline"] as? String ?? "" , ConnectionTool: data["connectionTool"] as? String ?? "", DateCreated: data["DateCreated"] as? Dete() ?? Date.now, specializayion: data["specializayion"] as? String ?? ""))
+//
+                   
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        }
+    }
+    
+    func loadData(){
+
+            db.collection("Users").whereField( "emailUser", isEqualTo: email!).addSnapshotListener{(querySnapshot, error) in
+            
+        if let err = error {
+            print("Error getting documents: \(err.localizedDescription)")
+        } else {
+         
+            for document in querySnapshot!.documents {
+                let data = document.data()
+                
+//                self.nameUser.text = data["userName"] as! String
+//                self.JobTitle.text = data["JobTitle"] as? String ?? ""
+//                self.Bio.text = data["Bio"] as? String  ?? ""
+//                self.website.text = data["website"] as? String ?? ""
+              
+            }
+        
+            
+        }
+        
+    }
+    }
+
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return projects.count
+
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectCell", for: indexPath) as! ProjectCell
+        
+        cell.nameProject.text = projects[indexPath.row].nameProject
+        cell.detailsProject.text = projects[indexPath.row].detailsProject
+//        cell.date.text = String(projects[indexPath.row].DateCreated.getElapsedInterval())
+        cell.backgroundColor = .gray
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selected = projects[indexPath.row]
+        print(selected)
+//        performSegue(withIdentifier: "show", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150.0
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 150.0
+    }
 }
+
+
+
+

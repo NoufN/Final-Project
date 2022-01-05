@@ -78,29 +78,13 @@ class ShowDevelopersVC: UIViewController, UICollectionViewDataSource, UICollecti
             nextVC.developer  = selected
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 180 , height: 196 )
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
-//        return 0.2
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        minimumLineSpacingForSectionAt section: Int) -> CGFloat{
-//        return 10
-//    }
-//}
+
     func collectionView(_ collectionView: UICollectionView,
                            layout collectionViewLayout: UICollectionViewLayout,
                                   minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
         return 0.1
      }
- //    بين كل صف
+    
       func collectionView(_ collectionView: UICollectionView,
                            layout collectionViewLayout: UICollectionViewLayout,
                              minimumLineSpacingForSectionAt section: Int) -> CGFloat{

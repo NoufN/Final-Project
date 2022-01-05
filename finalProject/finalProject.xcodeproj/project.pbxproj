@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E240DFD277E190F0025FDDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240DFC277E190F0025FDDD /* AppDelegate.swift */; };
 		1E240DFF277E190F0025FDDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240DFE277E190F0025FDDD /* SceneDelegate.swift */; };
-		1E240E01277E190F0025FDDD /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240E00277E190F0025FDDD /* SignUp.swift */; };
+		1E240E01277E190F0025FDDD /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240E00277E190F0025FDDD /* SignUpVC.swift */; };
 		1E240E04277E190F0025FDDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E240E02277E190F0025FDDD /* Main.storyboard */; };
 		1E240E06277E19140025FDDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E240E05277E19140025FDDD /* Assets.xcassets */; };
 		1E240E09277E19140025FDDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E240E07277E19140025FDDD /* LaunchScreen.storyboard */; };
@@ -31,19 +31,24 @@
 		1E240E3127806E090025FDDD /* AddProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240E3027806E090025FDDD /* AddProject.swift */; };
 		1E240E362781CB030025FDDD /* DeveloperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240E352781CB030025FDDD /* DeveloperCell.swift */; };
 		1E240E382781DDB20025FDDD /* DetailsDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240E372781DDB20025FDDD /* DetailsDeveloper.swift */; };
-		1E240E3A2782101B0025FDDD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240E392782101B0025FDDD /* File.swift */; };
+		1E240E3A2782101B0025FDDD /* getImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E240E392782101B0025FDDD /* getImage.swift */; };
 		1ED0479F2782DF4C0088014E /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0479E2782DF4C0088014E /* UpdateProfileVC.swift */; };
 		1ED047A127834E360088014E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047A027834E360088014E /* Error.swift */; };
 		1ED047A3278424690088014E /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047A2278424690088014E /* SettingVC.swift */; };
 		1ED047A5278424B60088014E /* signOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047A4278424B60088014E /* signOut.swift */; };
 		1ED047A927842ADD0088014E /* UpdatePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047A827842ADD0088014E /* UpdatePasswordVC.swift */; };
+		1ED047AB27843F7C0088014E /* DetailsProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047AA27843F7C0088014E /* DetailsProjectsVC.swift */; };
+		1ED047AD278452DA0088014E /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047AC278452DA0088014E /* ProjectCell.swift */; };
+		1ED047AF278455960088014E /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047AE278455960088014E /* Projects.swift */; };
+		1ED047B12784AEF00088014E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047B02784AEF00088014E /* File.swift */; };
+		1ED047B32784B5950088014E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047B22784B5950088014E /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E240DF9277E190F0025FDDD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E240DFC277E190F0025FDDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E240DFE277E190F0025FDDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1E240E00277E190F0025FDDD /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		1E240E00277E190F0025FDDD /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		1E240E03277E190F0025FDDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E240E05277E19140025FDDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E240E08277E19140025FDDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,12 +66,17 @@
 		1E240E3027806E090025FDDD /* AddProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProject.swift; sourceTree = "<group>"; };
 		1E240E352781CB030025FDDD /* DeveloperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperCell.swift; sourceTree = "<group>"; };
 		1E240E372781DDB20025FDDD /* DetailsDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDeveloper.swift; sourceTree = "<group>"; };
-		1E240E392782101B0025FDDD /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		1E240E392782101B0025FDDD /* getImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getImage.swift; sourceTree = "<group>"; };
 		1ED0479E2782DF4C0088014E /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
 		1ED047A027834E360088014E /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1ED047A2278424690088014E /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		1ED047A4278424B60088014E /* signOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signOut.swift; sourceTree = "<group>"; };
 		1ED047A827842ADD0088014E /* UpdatePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordVC.swift; sourceTree = "<group>"; };
+		1ED047AA27843F7C0088014E /* DetailsProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsProjectsVC.swift; sourceTree = "<group>"; };
+		1ED047AC278452DA0088014E /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		1ED047AE278455960088014E /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		1ED047B02784AEF00088014E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		1ED047B22784B5950088014E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +121,8 @@
 				1E240E3427819AA40025FDDD /* Controller */,
 				1E240E3227819A5B0025FDDD /* Model */,
 				1E240E05277E19140025FDDD /* Assets.xcassets */,
-				1E240E352781CB030025FDDD /* DeveloperCell.swift */,
+				1ED047A027834E360088014E /* Error.swift */,
+				1ED047B22784B5950088014E /* Date.swift */,
 				1E240E0A277E19140025FDDD /* Info.plist */,
 				1E240E10277E252E0025FDDD /* GoogleService-Info.plist */,
 			);
@@ -128,10 +139,10 @@
 		1E240E3227819A5B0025FDDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1E240E392782101B0025FDDD /* File.swift */,
+				1E240E392782101B0025FDDD /* getImage.swift */,
 				1ED047A4278424B60088014E /* signOut.swift */,
+				1ED047AE278455960088014E /* Projects.swift */,
 				1E240E1B277E2C7C0025FDDD /* Users.swift */,
-				1ED047A027834E360088014E /* Error.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +152,8 @@
 			children = (
 				1E240E02277E190F0025FDDD /* Main.storyboard */,
 				1E240E07277E19140025FDDD /* LaunchScreen.storyboard */,
+				1ED047AC278452DA0088014E /* ProjectCell.swift */,
+				1E240E352781CB030025FDDD /* DeveloperCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,11 +161,13 @@
 		1E240E3427819AA40025FDDD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1ED047AA27843F7C0088014E /* DetailsProjectsVC.swift */,
 				1E240E2C27806D6E0025FDDD /* ClientTabBar.swift */,
 				1ED047A2278424690088014E /* SettingVC.swift */,
 				1ED0479E2782DF4C0088014E /* UpdateProfileVC.swift */,
 				1E240E372781DDB20025FDDD /* DetailsDeveloper.swift */,
 				1E240E3027806E090025FDDD /* AddProject.swift */,
+				1ED047B02784AEF00088014E /* File.swift */,
 				1ED047A827842ADD0088014E /* UpdatePasswordVC.swift */,
 				1E240E2827806C500025FDDD /* HomeForDevelopersVC.swift */,
 				1E240E2627806B810025FDDD /* ShowDevelopersVC.swift */,
@@ -161,7 +176,7 @@
 				1E240E2A27806C750025FDDD /* HomeForClientVC.swift */,
 				1E240E20277EE1980025FDDD /* ProfilViewController.swift */,
 				1E240E2E27806D870025FDDD /* DeveloperTabBar.swift */,
-				1E240E00277E190F0025FDDD /* SignUp.swift */,
+				1E240E00277E190F0025FDDD /* SignUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,21 +263,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED047B12784AEF00088014E /* File.swift in Sources */,
 				1E240E2527806A2D0025FDDD /* forgotPasswordVC.swift in Sources */,
 				1E240E23278055FA0025FDDD /* LogeInVC.swift in Sources */,
 				1E240E362781CB030025FDDD /* DeveloperCell.swift in Sources */,
 				1E240E3127806E090025FDDD /* AddProject.swift in Sources */,
 				1E240E2B27806C750025FDDD /* HomeForClientVC.swift in Sources */,
-				1E240E3A2782101B0025FDDD /* File.swift in Sources */,
+				1ED047AB27843F7C0088014E /* DetailsProjectsVC.swift in Sources */,
+				1E240E3A2782101B0025FDDD /* getImage.swift in Sources */,
 				1ED047A3278424690088014E /* SettingVC.swift in Sources */,
 				1E240E2D27806D6E0025FDDD /* ClientTabBar.swift in Sources */,
 				1E240E382781DDB20025FDDD /* DetailsDeveloper.swift in Sources */,
+				1ED047B32784B5950088014E /* Date.swift in Sources */,
+				1ED047AD278452DA0088014E /* ProjectCell.swift in Sources */,
 				1E240E1C277E2C7C0025FDDD /* Users.swift in Sources */,
 				1E240E21277EE1980025FDDD /* ProfilViewController.swift in Sources */,
+				1ED047AF278455960088014E /* Projects.swift in Sources */,
 				1E240E2F27806D870025FDDD /* DeveloperTabBar.swift in Sources */,
 				1E240E2927806C500025FDDD /* HomeForDevelopersVC.swift in Sources */,
 				1E240E2727806B810025FDDD /* ShowDevelopersVC.swift in Sources */,
-				1E240E01277E190F0025FDDD /* SignUp.swift in Sources */,
+				1E240E01277E190F0025FDDD /* SignUpVC.swift in Sources */,
 				1ED0479F2782DF4C0088014E /* UpdateProfileVC.swift in Sources */,
 				1E240DFD277E190F0025FDDD /* AppDelegate.swift in Sources */,
 				1ED047A927842ADD0088014E /* UpdatePasswordVC.swift in Sources */,
