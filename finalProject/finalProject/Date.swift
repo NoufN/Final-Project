@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 extension Date {
 
 func getElapsedInterval() -> String {
@@ -50,8 +51,10 @@ func getElapsedInterval() -> String {
             return  "نُشر منذ ساعة"
             case 2 :
                 return  "نُشر منذ ساعتين"
+            case 3...10 :
+                return  "نُشر منذ ساعات"
             default:
-                return "نُشر منذ \(hour)" + " " + "ساعات"
+                return "نُشر منذ \(hour)" + " " + "ساعة"
             }
     } else {
         return "نُشر منذ قليل"

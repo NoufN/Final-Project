@@ -14,6 +14,7 @@ class LogeInVC: UIViewController {
     @IBOutlet weak var passwordUser: UITextField!
     let db = Firestore.firestore()
     var taypUser = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

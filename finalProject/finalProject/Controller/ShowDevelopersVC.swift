@@ -74,8 +74,9 @@ class ShowDevelopersVC: UIViewController, UICollectionViewDataSource, UICollecti
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show" {
-            let nextVC = segue.destination as! DetailsDeveloper
-            nextVC.developer  = selected
+            let nextVC = segue.destination as! DetailsProjectsVC
+     
+      
         }
     }
 

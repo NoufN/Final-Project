@@ -17,4 +17,8 @@ struct Projects {
     var ConnectionTool : String
     var  DateCreated : String
     var specializayion : String
+    var nameUser : String
+    var email : String
+    var image : String
+
 }

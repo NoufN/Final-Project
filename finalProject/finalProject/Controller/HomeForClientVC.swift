@@ -12,15 +12,15 @@ class HomeForClientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
  
     
     var projects = [Projects]()
- 
+    var initialCenter = CGPoint() 
     
 
     @IBOutlet weak var addProjectButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var project: UISegmentedControl!
     var selected : Projects? = nil
-    var initialCenter = CGPoint()
-    
+
+//let DateCreated = ""
     let db = Firestore.firestore()
     let email = Auth.auth().currentUser?.email
 
@@ -28,7 +28,7 @@ class HomeForClientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 //   var projects = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadAllProjects()
+     
         tableView.delegate = self
         tableView.dataSource = self
         addProjectButton.layer.cornerRadius = 0.5 * addProjectButton.bounds.size.width
@@ -38,21 +38,12 @@ class HomeForClientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
  
     }
     override func viewWillAppear(_ animated: Bool) {
-        loadAllProjects()
+        project.selectedSegmentIndex == 0 ? loadAllProjects() : loadMyProjects()
+        
     }
-//    @IBAction func indexChanged(sender: UISegmentedControl) {
-//        switch project.selectedSegmentIndex
-//        {
-//        case 0:
-//        projects = "Projects"
-//
-//        case 1:
-//            projects  = "My Project "
-//
-//        default:
-//            break;
-//        }
-//    }
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+        project.selectedSegmentIndex == 0 ? loadAllProjects() : loadMyProjects()
+    }
    @IBAction func panPiece(_ gestureRecognizer : UIPanGestureRecognizer) {
        guard gestureRecognizer.view != nil else {return}
        let piece = gestureRecognizer.view!
@@ -85,7 +76,12 @@ class HomeForClientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     let data = document.data()
              
                     
-                    self.projects.append(Projects(nameProject:data["Title"] as? String ?? "", detailsProject: data["Details"] as? String ?? "", Deadline: data["Deadline"] as? String ?? "" , ConnectionTool: data["connectionTool"] as? String ?? "", DateCreated: data["DateCreated"] as? String ?? "" , specializayion: data["specializayion"] as? String ?? ""))
+                    self.projects.append(Projects(nameProject: data["Title"] as? String ?? "", detailsProject: data["Details"] as? String ?? "", Deadline: data["Deadline"] as? String ?? "" , ConnectionTool: data["connectionTool"] as? String ?? "", DateCreated: data["DateCreated"] as? String ?? "", specializayion:  data["specializayion"] as? String ?? "", nameUser:  data["nameUser"] as? String ?? "", email: data["emailUser"] as? String ?? "", image: data["imageProfile"] as? String ?? ""))
+                        
+                        
+                        
+                        
+                       
         
                    
                 }
@@ -97,25 +93,26 @@ class HomeForClientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    func loadData(){
-
-            db.collection("Users").whereField( "emailUser", isEqualTo: email!).addSnapshotListener{(querySnapshot, error) in
+    func loadMyProjects(){
+        projects.removeAll()
+            db.collection("Projects").whereField( "emailUser", isEqualTo: email!).addSnapshotListener{(querySnapshot, error) in
             
         if let err = error {
             print("Error getting documents: \(err.localizedDescription)")
         } else {
-         
+            self.projects.removeAll()
             for document in querySnapshot!.documents {
                 let data = document.data()
-                
-//                self.nameUser.text = data["userName"] as! String
-//                self.JobTitle.text = data["JobTitle"] as? String ?? ""
-//                self.Bio.text = data["Bio"] as? String  ?? ""
-//                self.website.text = data["website"] as? String ?? ""
+         
+                self.projects.append(Projects(nameProject: data["Title"] as? String ?? "", detailsProject: data["Details"] as? String ?? "", Deadline: data["Deadline"] as? String ?? "" , ConnectionTool: data["connectionTool"] as? String ?? "", DateCreated: data["DateCreated"] as? String ?? "", specializayion:  data["specializayion"] as? String ?? "", nameUser:  data["nameUser"] as? String ?? "", email: data["emailUser"] as? String ?? "", image: data["imageProfile"] as? String ?? ""))
+                    
               
             }
         
-            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                
+            }
         }
         
     }
@@ -134,15 +131,27 @@ class HomeForClientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         cell.nameProject.text = projects[indexPath.row].nameProject
         cell.detailsProject.text = projects[indexPath.row].detailsProject
-        cell.date.text = projects[indexPath.row].DateCreated
+        let dateCreated =  projects[indexPath.row].DateCreated
+        
+        cell.date.text =  stringToDate(Date: dateCreated)
+   
         cell.backgroundColor = .gray
         
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selected = projects[indexPath.row]
-        print(selected)
-//        performSegue(withIdentifier: "show", sender: nil)
+   
+        performSegue(withIdentifier: "show", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "show" {
+            let nextVC = segue.destination as! DetailsProjectsVC
+            nextVC.projects = selected
+        
+      
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

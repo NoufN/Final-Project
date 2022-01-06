@@ -67,8 +67,13 @@ class HomeForDevelopersVC: UIViewController  ,UITableViewDelegate, UITableViewDa
                     let data = document.data()
              
                     
-//                    self.projects.append(Projects(nameProject:data["Title"] as? String ?? "", detailsProject: data["Details"] as? String ?? "", Deadline: data["Deadline"] as? String ?? "" , ConnectionTool: data["connectionTool"] as? String ?? "", DateCreated: data["DateCreated"] as? Dete() ?? Date.now, specializayion: data["specializayion"] as? String ?? ""))
-//
+                    self.projects.append(Projects(nameProject: data["Title"] as? String ?? "", detailsProject: data["Details"] as? String ?? "", Deadline: data["Deadline"] as? String ?? "" , ConnectionTool: data["connectionTool"] as? String ?? "", DateCreated: data["DateCreated"] as? String ?? "", specializayion:  data["specializayion"] as? String ?? "", nameUser:  data["nameUser"] as? String ?? "", email: data["emailUser"] as? String ?? "", image: data["imageProfile"] as? String ?? ""))
+                        
+                        
+                        
+                        
+                       
+        
                    
                 }
                 DispatchQueue.main.async {
@@ -104,7 +109,6 @@ class HomeForDevelopersVC: UIViewController  ,UITableViewDelegate, UITableViewDa
     }
 
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return projects.count
 
@@ -116,15 +120,27 @@ class HomeForDevelopersVC: UIViewController  ,UITableViewDelegate, UITableViewDa
         
         cell.nameProject.text = projects[indexPath.row].nameProject
         cell.detailsProject.text = projects[indexPath.row].detailsProject
-//        cell.date.text = String(projects[indexPath.row].DateCreated.getElapsedInterval())
+        let dateCreated =  projects[indexPath.row].DateCreated
+        
+        cell.date.text =  stringToDate(Date: dateCreated)
+   
         cell.backgroundColor = .gray
         
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selected = projects[indexPath.row]
-        print(selected)
-//        performSegue(withIdentifier: "show", sender: nil)
+   
+        performSegue(withIdentifier: "show", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "show" {
+            let nextVC = segue.destination as! DetailsProjectsVC
+            nextVC.projects = selected
+        
+      
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -134,7 +150,3 @@ class HomeForDevelopersVC: UIViewController  ,UITableViewDelegate, UITableViewDa
         return 150.0
     }
 }
-
-
-
-
