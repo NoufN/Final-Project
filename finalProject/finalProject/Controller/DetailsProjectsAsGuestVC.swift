@@ -1,17 +1,16 @@
 //
-//  DetailsProjectsVC.swift
+//  DetailsProjectsAsGuestVC.swift
 //  finalProject
 //
-//  Created by nouf on 04/01/2022.
+//  Created by nouf on 12/01/2022.
 //
 
 import UIKit
 import Firebase
-
-class DetailsProjectsVC: UIViewController, UICollectionViewDataSource , UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
-   
-
- 
+class DetailsProjectsAsGuestVC: UIViewController , UICollectionViewDataSource , UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
+    
+    
+    
     // project post
     @IBOutlet weak var nameUser: UILabel!
     @IBOutlet weak var imageProfile: UIImageView!
@@ -29,18 +28,16 @@ class DetailsProjectsVC: UIViewController, UICollectionViewDataSource , UICollec
 
     //  comment
     @IBOutlet weak var commentCollection: UICollectionView!
-    @IBOutlet weak var comment: UITextField!
     var comments = [Comment]()
     var name = ""
     var profilImageName = ""
     var email = ""
-    var emailUser = Auth.auth().currentUser?.email
+
     var selected = ""
     let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        getUser()
 
         nameUser.text =  projects?.nameUser
         titleProject.text = projects?.nameProject
@@ -85,61 +82,7 @@ getImage(imgStr: name)
 //
     //
     
-    func getUser()  {
-        if let emailUser = emailUser {
-            db.collection("Users").document(emailUser).getDocument{ documentSnapshot, error in
-                if let error = error {
-                    print("Error: ",error.localizedDescription)
-                }else {
-                    
-                    self.name  = documentSnapshot?.get("userName") as? String ?? "nil"
-                    self.profilImageName = documentSnapshot?.get("image") as? String ?? "nil"
-            
-                }
-            }
-            
-            
-            
-        }
-    }
-    @IBAction func sendComment(_ sender: Any) {
-        
-        
-        addComment()
-        
-    }
-    
-    func  addComment(){
-        
-        
-        
-        db.collection("Projects").document(IdProject).collection("Comments").document().setData(
-            
-            [
-                "emailUser"  : Auth.auth().currentUser?.email! ,
-                "image"  : profilImageName  ,
-                "userName" : name ,
-                "Comments" : comment.text!
-            ]
-        ){ (error) in
-            if let error = error {
-                print("Error: ",error.localizedDescription)
-            }else {
-                print("new document has created..")
-                self.comments.append(Comment(name: self.name , comment: self.comment.text!, image: self.profilImageName , email:  (Auth.auth().currentUser?.email!)!))
-                
-                
-                
-            }
-            DispatchQueue.main.async {
-                self.commentCollection.reloadData()
-        }
-    }
-    
-    }
-    
- 
-    
+
     
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -225,3 +168,4 @@ getImage(imgStr: name)
     }
 
 }
+

@@ -22,11 +22,15 @@ class ProfilViewController: UIViewController {
     var userSelected : User?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       imageProfile.layer.borderWidth = 1
+         imageProfile.layer.masksToBounds = true
+     imageProfile.layer.borderColor = UIColor.black.cgColor
+        imageProfile.layer.cornerRadius =  imageProfile.frame.height/2
+        imageProfile.clipsToBounds = true
         loadData()
     }
     override func viewWillAppear(_ animated: Bool) {
-        loadData()
+  
     }
 
     @IBAction func signOut(_ sender: Any) {
@@ -56,11 +60,14 @@ class ProfilViewController: UIViewController {
             for document in querySnapshot!.documents {
                 let data = document.data()
                 
-                self.nameUser.text = data["userName"] as! String
+                self.nameUser.text = data["userName"] as? String
                 self.JobTitle.text = data["JobTitle"] as? String ?? ""
                 self.Bio.text = data["Bio"] as? String  ?? ""
                 self.website.text = data["website"] as? String ?? ""
-              
+                let name = data["image"] as? String ?? ""
+                self.getImage(imgStr: name)
+//                self.imageProfile.downloaded(from:"gs://finalproject-46146.appspot.com/images/" + "\(name)")
+////                getImage(imgStr: name, image: self.imageProfile.image!)
             }
         
             
@@ -68,7 +75,22 @@ class ProfilViewController: UIViewController {
         
     }
     }
+  
+    
+    func getImage(imgStr: String )  {
 
-    
-    
+        let url = "gs://finalproject-46146.appspot.com/images/" + "\(imgStr)"
+        let Ref = Storage.storage().reference(forURL: url)
+        Ref.getData(maxSize:  1024 * 1024) { data, error in
+            if error != nil {
+                print("Error: Image could not download!")
+            } else {
+              
+
+                self.imageProfile.image = UIImage(data: data!)!
+            }
+        }
+
+    }
+
 }

@@ -10,7 +10,7 @@ import Foundation
 
 
 struct Projects {
-    
+    var IdProject : String
     var nameProject : String
     var detailsProject : String
     var Deadline : String

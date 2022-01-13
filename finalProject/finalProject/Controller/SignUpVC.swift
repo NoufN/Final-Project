@@ -22,7 +22,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nameUser.customTextfield()
+        nameUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
+        emilUser.customTextfield()
+      emilUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
+        passwordUser.customTextfield()
+        passwordUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
     }
     
     

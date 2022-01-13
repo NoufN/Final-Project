@@ -11,17 +11,31 @@ class UpdateProfileVC: UIViewController {
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var nameUser: UITextField!
     @IBOutlet weak var JobTitle: UITextField!
-    @IBOutlet weak var Bio: UITextField!
+    @IBOutlet weak var Bio: UITextView!
     @IBOutlet weak var website: UITextField!
     let imagePicker = UIImagePickerController()
     var imageName = "\(UUID().uuidString).png"
     let db = Firestore.firestore()
     let email = Auth.auth().currentUser?.email
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        imageProfile.image = UIImage(named: "\(user.image)")
-      loadData()
+        
+        imageProfile.layer.borderWidth = 1
+        imageProfile.layer.masksToBounds = true
+        imageProfile.layer.borderColor = UIColor.black.cgColor
+        imageProfile.layer.cornerRadius =  imageProfile.frame.height/2
+        imageProfile.clipsToBounds = true
+        nameUser.customTextfield()
+        nameUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
+//        Bio.customTextfield()
+//        Bio.frame = CGRect(x: 0, y: 0, width: 0, height:50)
+        JobTitle.customTextfield()
+        JobTitle.frame = CGRect(x: 0, y: 0, width: 0, height:50)
+        website.customTextfield()
+        website.frame = CGRect(x: 0, y: 0, width: 0, height:50)
+        
+        loadData()
         
         imagePicker.delegate = self
         imageProfile.layer.cornerRadius = imageProfile.frame.width/2
@@ -36,6 +50,7 @@ class UpdateProfileVC: UIViewController {
     
     @IBAction func save(_ sender: Any) {
         updateData()
+        self.navigationController?.popViewController(animated: true)
     }
     
     func updateData() {
@@ -46,40 +61,42 @@ class UpdateProfileVC: UIViewController {
             "Bio"  : Bio.text! ,
             "JobTitle" : JobTitle.text! ,
             "website" : website.text! ,
-    ]) { err in
-        if let err = err {
-            print("Error updating document: \(err.localizedDescription)")
-        } else {
-            print("Document successfully updated")
-          
-        }
-    }
-}
-
-    func loadData(){
-
-            db.collection("Users").whereField( "emailUser", isEqualTo: email!).addSnapshotListener{(querySnapshot, error) in
-            
-        if let err = error {
-            print("Error getting documents: \(err.localizedDescription)")
-        } else {
-         
-            for document in querySnapshot!.documents {
-                let data = document.data()
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err.localizedDescription)")
+            } else {
+                print("Document successfully updated")
                 
-                self.nameUser.text = data["userName"] as! String
-                self.JobTitle.text = data["JobTitle"] as? String ?? ""
-                self.Bio.text = data["Bio"] as? String  ?? ""
-                self.website.text = data["website"] as? String ?? ""
-              
             }
+        }
+    }
+    
+    func loadData(){
         
+        db.collection("Users").whereField( "emailUser", isEqualTo: email!).addSnapshotListener{(querySnapshot, error) in
+            
+            if let err = error {
+                print("Error getting documents: \(err.localizedDescription)")
+            } else {
+                
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    
+                    self.nameUser.text = data["userName"] as! String
+                    self.JobTitle.text = data["JobTitle"] as? String ?? ""
+                    self.Bio.text  = data["Bio"] as? String  ?? ""
+                    self.website.text = data["website"] as? String ?? ""
+                    let name = data["image"] as? String ?? ""
+                    
+                    self.getImage(imgStr: name )
+                }
+                
+                
+            }
             
         }
-        
     }
-    }
-
+    
     func uploadImage(){
         let imagefolder = Storage.storage().reference().child("images")
         if let imageData = imageProfile.image?.jpegData(compressionQuality: 0.1) {
@@ -95,6 +112,21 @@ class UpdateProfileVC: UIViewController {
     }
     
     
+    func getImage(imgStr: String )  {
+        
+        let url = "gs://finalproject-46146.appspot.com/images/" + "\(imgStr)"
+        let Ref = Storage.storage().reference(forURL: url)
+        Ref.getData(maxSize:1 * 1024 * 1024) { data, error in
+            if error != nil {
+                print("Error: Image could not download!")
+            } else {
+                
+                
+                self.imageProfile.image = UIImage(data: data!)!
+            }
+        }
+        
+    }
 }
 
 

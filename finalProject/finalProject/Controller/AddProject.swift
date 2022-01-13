@@ -13,7 +13,7 @@ class AddProject: UIViewController{
     @IBOutlet weak var detalisProject: UITextView!
     @IBOutlet weak var titleProject: UITextField!
     @IBOutlet weak var specializayion: UISegmentedControl!
-     var specializayionValue = "applications"
+     var specializayionValue = "تطبيقات الجوال"
     @IBOutlet weak var connectionTool: UITextField!
     @IBOutlet weak var valueLabel : UILabel!
     @IBOutlet weak var stepper : UIStepper!
@@ -28,10 +28,10 @@ class AddProject: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         loedUser()
-        viewSub.layer.borderWidth = 0.5
-        viewSub.layer.borderColor = UIColor.gray.cgColor
-        viewSub.layer.masksToBounds = true
-        viewSub.layer.cornerRadius = 5
+//        viewSub.layer.borderWidth = 0.5
+//        viewSub.layer.borderColor = UIColor.gray.cgColor
+//        viewSub.layer.masksToBounds = true
+//        viewSub.layer.cornerRadius = 5
         stepper.wraps = true
           stepper.autorepeat = true
           stepper.maximumValue = 100
@@ -58,6 +58,7 @@ class AddProject: UIViewController{
     @IBAction func save(_ sender: Any) {
         if detalisProject.text != ""  && titleProject.text != "" && connectionTool.text != "" {
             addProject()
+            self.navigationController?.popViewController(animated: true)
         } else {
             
             let alert = UIAlertController(title: "عذرًا", message:"يجب عليك ملىء كل الحقول المطلوبة", preferredStyle: .alert)
@@ -89,28 +90,37 @@ class AddProject: UIViewController{
     }
     
     func  addProject(){
-        db.collection("Projects").addDocument(data: [
-                        "emailUser"  : email! ,
-                        "Title"  : titleProject.text!,
-                        "Details" : detalisProject.text! ,
-                        "specializayion"  : specializayionValue ,
-                        "Deadline" :    valueLabel.text!,
-                        "ConnectionTool" : connectionTool.text! ,
-                        "nameUser" : nameUser ,
-                        "imageProfile" :  nameImage ,
-                        "DateCreated" : dateCreated  ,
-                        "comments" : ""
-                    ]) { [self]  (error) in
-                        if let e = error {
-                            print(e)
-                        } else {
-                            print("Successfully saved data")
-//                            self.project.append(Projects(nameProject: titleProject.text!, detailsProject: detalisProject.text!, Deadline: valueLabel.text!, ConnectionTool: self.connectionTool.text!, DateCreated: "\(Date.now)", specializayion: ""))
-                        }
+  
+                let Ref = self.db.collection("Projects")
+                let Doc = Ref.document()
+                print("Doc",Doc.documentID)
+                let data = [
+                    "ProjectID":Doc.documentID ,
+                    "emailUser"  : email! ,
+                    "Title"  : titleProject.text!,
+                    "Details" : detalisProject.text! ,
+                    "specializayion"  : specializayionValue ,
+                    "Deadline" :    valueLabel.text!,
+                    "ConnectionTool" : connectionTool.text! ,
+                    "nameUser" : nameUser ,
+                    "imageProfile" :  nameImage ,
+                    "DateCreated" : dateCreated  ,
+//                    "Likes" : []
+                ] as [String : Any]
+                Doc.setData(data) { error in
+                    if let error = error {
+                        print("Error: ",error.localizedDescription)
+                    }else {
+                  
+                        print("Successfully saved data")
+//                        self.project.append(Projects(nameProject: titleProject.text!, detailsProject: detalisProject.text!, Deadline: valueLabel.text!, ConnectionTool: self.connectionTool.text!, DateCreated: "\(Date.now)", specializayion: ""))
                     }
+                }
+            }
+     
     }
             
             
            
 
-}
+

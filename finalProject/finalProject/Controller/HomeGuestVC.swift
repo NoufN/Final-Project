@@ -1,17 +1,17 @@
 //
-//  HomeForDevelopersVC.swift
+//  HomeGuestVC.swift
 //  finalProject
 //
-//  Created by nouf on 01/01/2022.
+//  Created by nouf on 12/01/2022.
 //
 
 import UIKit
 import Firebase
 
-class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout ,  UISearchBarDelegate {
+class HomeGuestVC: UIViewController ,  UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout ,  UISearchBarDelegate {
     
-   
-
+    
+    
     
     var projects = [Projects]()
  
@@ -19,7 +19,7 @@ class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UIColl
 
 
     @IBOutlet weak var collectionView : UICollectionView!
-    @IBOutlet weak var project: UISegmentedControl!
+
     @IBOutlet weak var searchBar: UISearchBar!
     var selected : Projects? = nil
   
@@ -44,11 +44,9 @@ class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UIColl
     override func viewWillAppear(_ animated: Bool) {
         
         loadAllProjects()
-//        project.selectedSegmentIndex == 0 ? loadAllProjects() : loadLikeProjects()
+
     }
-    @IBAction func indexChanged(sender: UISegmentedControl) {
-        project.selectedSegmentIndex == 0 ? loadAllProjects() : loadLikeProjects()
-    }
+   
 
     
     
@@ -185,7 +183,7 @@ class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UIColl
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show" {
-            let nextVC = segue.destination as!  DetailsProjectsVC
+            let nextVC = segue.destination as!  DetailsProjectsAsGuestVC
             nextVC.projects = selected
 
 
@@ -227,3 +225,4 @@ class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UIColl
 //        }
 //    }
 //}
+
