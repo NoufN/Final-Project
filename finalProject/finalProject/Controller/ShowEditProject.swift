@@ -73,6 +73,7 @@ class ShowEditProject: UIViewController, UICollectionViewDelegate, UICollectionV
                                if let err = err {
                                    print("Error removing document: \(err.localizedDescription)")
                                } else {
+                    
                                    self.navigationController?.popViewController(animated: true)
                                }
             }
@@ -83,7 +84,7 @@ class ShowEditProject: UIViewController, UICollectionViewDelegate, UICollectionV
           
         
     }
- 
+
     
     @IBAction func edit(_ sender: Any) {
         updateData()

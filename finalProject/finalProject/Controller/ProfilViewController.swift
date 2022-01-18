@@ -16,37 +16,51 @@ class ProfilViewController: UIViewController {
     @IBOutlet weak var Bio: UILabel!
     @IBOutlet weak var website: UILabel!
     
+    @IBOutlet weak var subview: UIView!
     let db = Firestore.firestore()
     var user = [User]()
     let email = Auth.auth().currentUser?.email
     var userSelected : User?
     override func viewDidLoad() {
         super.viewDidLoad()
-       imageProfile.layer.borderWidth = 1
-         imageProfile.layer.masksToBounds = true
-     imageProfile.layer.borderColor = UIColor.black.cgColor
-        imageProfile.layer.cornerRadius =  imageProfile.frame.height/2
-        imageProfile.clipsToBounds = true
+        subview.layer.cornerRadius = 10
+        subview.layer.cornerRadius = 20
+        subview.layer.borderWidth = 0.1
+        subview.layer.shadowColor = UIColor.black.cgColor
+        subview.layer.shadowOffset = CGSize(width: 0, height: 5)
+        subview.layer.shadowRadius = 5
+        subview.layer.shadowOpacity =  0.50
+        subview.layer.masksToBounds = false
+
         loadData()
     }
     override func viewWillAppear(_ animated: Bool) {
   
     }
 
-    @IBAction func signOut(_ sender: Any) {
-    
-     do {
-         try  Auth.auth().signOut()
-         
-         dismiss(animated: true, completion: nil)
-     } catch  {
-         print (error.localizedDescription)
-     }
-        
-    }
+ 
     
    
+    @IBAction func signOut(_ sender: Any) {
 
+        let alert = UIAlertController(title: "تنبية" , message: "هل تريد تسجيل الخروج ؟", preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "نعم", style: .default) { action in
+
+
+                do {
+                    try  Auth.auth().signOut()
+                    self.dismiss(animated: true, completion: nil)
+                } catch  {
+                    print (error.localizedDescription)
+                }
+
+    }
+        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "الغاء", style: .cancel , handler: nil ))
+        present(alert, animated: true , completion: nil)
+    }
+    
  
 
     func loadData(){
@@ -66,8 +80,7 @@ class ProfilViewController: UIViewController {
                 self.website.text = data["website"] as? String ?? ""
                 let name = data["image"] as? String ?? ""
                 self.getImage(imgStr: name)
-//                self.imageProfile.downloaded(from:"gs://finalproject-46146.appspot.com/images/" + "\(name)")
-////                getImage(imgStr: name, image: self.imageProfile.image!)
+            
             }
         
             

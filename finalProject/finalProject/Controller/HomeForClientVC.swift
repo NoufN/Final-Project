@@ -22,12 +22,11 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
     
     var selected : Projects? = nil
     
-    //let DateCreated = ""
+  
     let db = Firestore.firestore()
     let email = Auth.auth().currentUser?.email
     var id = ""
     
-    //   var projects = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,8 +34,7 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
         collectionView.dataSource = self
         addProjectButton.layer.cornerRadius = 0.5 * addProjectButton.bounds.size.width
         addProjectButton.clipsToBounds = true
-        
-        
+     
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -140,8 +138,13 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
         cell.date.text =  stringToDate(Date: dateCreated)
         id = projects[indexPath.row].IdProject
         
-        cell.backgroundColor = #colorLiteral(red: 0.9032060504, green: 0.9586966634, blue: 0.9618744254, alpha: 1)
-        cell.layer.cornerRadius = 10
+        cell.layer.cornerRadius = 20
+        cell.layer.borderWidth = 0.1
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
+        cell.layer.shadowRadius = 1
+        cell.layer.shadowOpacity =  0.50
+        cell.layer.masksToBounds = false
         
         return cell
     }
@@ -178,4 +181,3 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
     }
  
 }
-

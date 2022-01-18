@@ -69,7 +69,13 @@ class UpdateProfileVC: UIViewController {
                 
             }
         }
+        
+        
     }
+        
+
+        
+    
     
     func loadData(){
         

@@ -15,9 +15,10 @@ class AddProject: UIViewController{
     @IBOutlet weak var specializayion: UISegmentedControl!
      var specializayionValue = "تطبيقات الجوال"
     @IBOutlet weak var connectionTool: UITextField!
-    @IBOutlet weak var valueLabel : UILabel!
+    @IBOutlet weak var value : UITextField!
+
     @IBOutlet weak var stepper : UIStepper!
-    @IBOutlet weak var viewSub: UIView!
+    
     var dateCreated  = ""
     
     var nameImage  : String?
@@ -39,7 +40,7 @@ class AddProject: UIViewController{
         dateCreated = dateToSring()
     }
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        valueLabel.text = Int(sender.value).description
+        value.text = Int(sender.value).description
     
     }
     @IBAction func indexChanged(sender: UISegmentedControl) {
@@ -100,7 +101,7 @@ class AddProject: UIViewController{
                     "Title"  : titleProject.text!,
                     "Details" : detalisProject.text! ,
                     "specializayion"  : specializayionValue ,
-                    "Deadline" :    valueLabel.text!,
+                    "Deadline" :    value.text!,
                     "ConnectionTool" : connectionTool.text! ,
                     "nameUser" : nameUser ,
                     "imageProfile" :  nameImage ,

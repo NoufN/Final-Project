@@ -13,7 +13,8 @@ class UpdatePasswordVC: UIViewController {
     @IBOutlet weak var password: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        password.customTextfield()
+      
         // Do any additional setup after loading the view.
     }
     
@@ -27,7 +28,7 @@ class UpdatePasswordVC: UIViewController {
                     self.present(alert, animated: true, completion: nil)
 
                 } else {
-                    print("Done")
+                    self.navigationController?.popViewController(animated: true)
                 }
     }
     

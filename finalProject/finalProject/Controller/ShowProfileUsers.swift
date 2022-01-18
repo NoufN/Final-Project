@@ -20,7 +20,14 @@ class ShowProfileUsers: UIViewController {
 var userEmail = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewSub.layer.cornerRadius = 10
         viewSub.layer.cornerRadius = 20
+        viewSub.layer.borderWidth = 0.1
+        viewSub.layer.shadowColor = UIColor.black.cgColor
+        viewSub.layer.shadowOffset = CGSize(width: 0, height: 5)
+        viewSub.layer.shadowRadius = 5
+        viewSub.layer.shadowOpacity =  0.50
+        viewSub.layer.masksToBounds = false
      getUser(Email: userEmail)
         
         
@@ -38,14 +45,13 @@ var userEmail = ""
             for document in querySnapshot!.documents {
                 let data = document.data()
                 
-                
-            
-                
+        
                 self.nameUser.text = data["userName"] as! String
                 self.JobTitle.text = data["JobTitle"] as? String ?? ""
                 self.Bio.text = data["Bio"] as? String ?? ""
                 self.website.text = data["website"] as? String ?? ""
-                self.getImage(imgStr: data["JobTitle"] as? String ?? "")
+                let name = data["image"] as? String ?? ""
+                self.getImage(imgStr: name)
             }
           
             
@@ -62,9 +68,7 @@ var userEmail = ""
             if error != nil {
                 print("Error: Image could not download!")
             } else {
-              
-
-                self.imageUser.image = UIImage(data: data!)!
+             self.imageUser.image = UIImage(data: data!)!
             }
         }
 

@@ -46,9 +46,9 @@ class DetailsProjectsAsGuestVC: UIViewController , UICollectionViewDataSource , 
         connectionTool.text = projects?.ConnectionTool
 
         Deadline.text =  projects?.Deadline
-        let name = (projects?.image)!
+//        let name = (projects?.image)!
         
-getImage(imgStr: name)
+//getImage(imgStr: name)
         
         dateCreated.text =  stringToDate(Date: projects!.DateCreated)
         

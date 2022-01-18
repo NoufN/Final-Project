@@ -33,7 +33,8 @@ class LogeInVC: UIViewController {
         if emilUser.text != "" && passwordUser.text != "" {
             
             signIn ()
-            
+        
+       
         } else {
             let alert = UIAlertController(title: "عذرًا", message:"يجب عليك ملىء كل الحقول المطلوبة", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
@@ -84,7 +85,8 @@ class LogeInVC: UIViewController {
                     tabBar.modalPresentationStyle = .fullScreen
                     self.present( tabBar, animated: true , completion: nil)
                 }
-                
+                    self.emilUser.clear()
+                    self.passwordUser.clear()
             }
         }
     }

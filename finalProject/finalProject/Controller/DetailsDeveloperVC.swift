@@ -1,9 +1,3 @@
-//
-//  DetailsDeveloper.swift
-//  finalProject
-//
-//  Created by nouf on 02/01/2022.
-//
 
 import UIKit
 import Firebase
@@ -21,6 +15,14 @@ class DetailsDeveloper: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSub.layer.cornerRadius = 20
+        viewSub.layer.cornerRadius = 10
+        viewSub.layer.cornerRadius = 20
+        viewSub.layer.borderWidth = 0.1
+        viewSub.layer.shadowColor = UIColor.black.cgColor
+        viewSub.layer.shadowOffset = CGSize(width: 0, height: 5)
+        viewSub.layer.shadowRadius = 5
+        viewSub.layer.shadowOpacity =  0.50
+        viewSub.layer.masksToBounds = false
         getImage(imgStr: developer.image)
         nameUser.text = developer?.userName
         JobTitle.text = developer?.JobTitle
@@ -42,8 +44,8 @@ class DetailsDeveloper: UIViewController {
 //                self.imageUser.layer.borderWidth = 1
 //                self.imageUser.layer.masksToBounds = true
 //                self.imageUser.layer.borderColor = UIColor.gray.cgColor
-                self.imageUser.layer.cornerRadius = self.imageUser.frame.width/2
-                self.imageUser.clipsToBounds = true
+//                self.imageUser.layer.cornerRadius = self.imageUser.frame.width/2
+//                self.imageUser.clipsToBounds = true
                 self.imageUser.contentMode = .scaleToFill
             }
         }
