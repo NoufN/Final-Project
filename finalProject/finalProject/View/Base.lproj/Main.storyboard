@@ -15,7 +15,7 @@
         <!--المشاريع-->
         <scene sceneID="4dN-wU-vGW">
             <objects>
-                <viewController id="PMU-cv-HGI" customClass="HomeForClientVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PMU-cv-HGI" customClass="HomeForClientVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v95-sM-yam">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectCell" id="X7O-8S-heZ" customClass="ProjectCell" customModule="finalProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectCell" id="X7O-8S-heZ" customClass="ProjectCell" customModule="Code_It" customModuleProvider="target">
                                         <rect key="frame" x="13" y="0.0" width="348" height="148"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="axk-Ap-F83">
@@ -155,13 +155,13 @@
         <!--Details ProjectsVC-->
         <scene sceneID="w7o-zF-5Vo">
             <objects>
-                <viewController storyboardIdentifier="DetailsProjectsVC" id="gHy-37-VGX" customClass="DetailsProjectsVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsProjectsVC" id="gHy-37-VGX" customClass="DetailsProjectsVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xjb-Jl-Vrc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVf-w4-3wO">
-                                <rect key="frame" x="327" y="781" width="69" height="32"/>
+                                <rect key="frame" x="327" y="732" width="69" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="j4P-0K-omq"/>
                                     <constraint firstAttribute="height" constant="32" id="tTB-O1-FV3"/>
@@ -176,7 +176,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اكتب تعليق " textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tKH-uf-sPz">
-                                <rect key="frame" x="30" y="780" width="289" height="34"/>
+                                <rect key="frame" x="30" y="731" width="289" height="34"/>
                                 <color key="backgroundColor" name="Color-2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="xfd-3f-h7L"/>
@@ -224,7 +224,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommentCell" id="6Bn-hV-ED1" customClass="CommentCell" customModule="finalProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommentCell" id="6Bn-hV-ED1" customClass="CommentCell" customModule="Code_It" customModuleProvider="target">
                                         <rect key="frame" x="1.5" y="0.0" width="373" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mbv-0x-wdN">
@@ -276,7 +276,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التواصل" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huO-so-gfA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="التواصل" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huO-so-gfA">
                                 <rect key="frame" x="23" y="484" width="376" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="UmV-Tq-3wb"/>
@@ -285,13 +285,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="اسم المشروع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcr-7Y-S79">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="اسم المشروع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcr-7Y-S79">
                                 <rect key="frame" x="20" y="157" width="374" height="27.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" red="0.40834510600000001" green="0.49200241459999999" blue="0.640920928" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التفاصيل" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQG-x8-je5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="الوصف" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQG-x8-je5">
                                 <rect key="frame" x="21" y="282" width="374" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="S9a-05-0zA"/>
@@ -300,7 +300,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRq-Gf-TtK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRq-Gf-TtK">
                                 <rect key="frame" x="25" y="305" width="372" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="aGo-tz-Pmt"/>
@@ -309,7 +309,7 @@
                                 <color key="textColor" red="0.84883747590000003" green="0.83598069559999999" blue="0.86087566609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.84883747590000003" green="0.83598069559999999" blue="0.86087566609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-4F-5g7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-4F-5g7">
                                 <rect key="frame" x="25" y="336" width="369" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="yQ1-TS-inC"/>
@@ -318,29 +318,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="example@example.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-fV-Qha">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="example@example.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-fV-Qha">
                                 <rect key="frame" x="25" y="541" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="FZ6-Qc-flw">
-                                <rect key="frame" x="20" y="194.5" width="374" height="67.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="FZ6-Qc-flw">
+                                <rect key="frame" x="20" y="194.5" width="374" height="37.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-WM-RR1">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NgF-mc-Nz4">
-                                                <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وقته" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXc-zg-SeI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="210" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="210" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="diP-75-MmL">
-                                                        <rect key="frame" x="218" y="0.5" width="20" height="49"/>
+                                                        <rect key="frame" x="218" y="0.5" width="20" height="19"/>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="SVl-ph-u00"/>
@@ -349,7 +349,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m3-g7-2h0">
-                                                <rect key="frame" x="249" y="0.0" width="3" height="50"/>
+                                                <rect key="frame" x="249" y="0.0" width="3" height="20"/>
                                                 <color key="backgroundColor" red="0.79339091650000004" green="0.7778342318" blue="0.7778342318" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="3" id="yph-nU-R9x"/>
@@ -359,7 +359,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نوعه" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7o-eV-O68">
-                                                <rect key="frame" x="263" y="0.0" width="111" height="50"/>
+                                                <rect key="frame" x="263" y="0.0" width="111" height="20"/>
                                                 <color key="tintColor" red="0.90196073060000004" green="0.90196073060000004" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="111" id="ETn-mZ-GWm"/>
@@ -371,7 +371,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fsr-WX-cm8">
-                                        <rect key="frame" x="0.0" y="53" width="374" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="23" width="374" height="14.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="مدة التنفيذ (يوم)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOj-ll-mIO">
                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="14.5"/>
@@ -392,13 +392,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التعليقات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjd-Rj-y10">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="التعليقات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjd-Rj-y10">
                                 <rect key="frame" x="332" y="574.5" width="68.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrO-zE-sGk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrO-zE-sGk">
                                 <rect key="frame" x="30" y="501" width="376" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.84883747590000003" green="0.83598069559999999" blue="0.86087566609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -481,7 +481,7 @@
         <!--المبرمجين-->
         <scene sceneID="kI6-XK-7qb">
             <objects>
-                <viewController id="IXx-AM-JQZ" customClass="ShowDevelopersVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IXx-AM-JQZ" customClass="ShowDevelopersVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LEs-hX-KiJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,7 +496,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeveloperCell" id="Ssw-kX-0kp" customClass="DeveloperCell" customModule="finalProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeveloperCell" id="Ssw-kX-0kp" customClass="DeveloperCell" customModule="Code_It" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="186" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="atD-VT-Azg">
@@ -525,7 +525,6 @@
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" name="Color-1"/>
                                             <constraints>
                                                 <constraint firstItem="ggm-Kf-4Gz" firstAttribute="top" secondItem="atD-VT-Azg" secondAttribute="top" constant="20" id="740-iS-V8F"/>
                                                 <constraint firstAttribute="bottom" secondItem="Zdd-2f-h2e" secondAttribute="bottom" constant="20" id="Ffl-NX-vOc"/>
@@ -536,6 +535,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Zdd-2f-h2e" secondAttribute="trailing" constant="5" id="plF-4O-XCf"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="Color-1"/>
                                         <size key="customSize" width="186" height="169"/>
                                         <connections>
                                             <outlet property="imageUser" destination="ggm-Kf-4Gz" id="kUd-er-Uof"/>
@@ -569,7 +569,7 @@
         <!--المشاريع-->
         <scene sceneID="iAN-zT-Yn6">
             <objects>
-                <viewController id="MHR-a8-InX" customClass="HomeForDevelopersVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MHR-a8-InX" customClass="HomeForDevelopersVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yu8-R9-90n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -591,7 +591,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectCell" id="mT7-Dx-Lz8" customClass="ProjectCell" customModule="finalProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectCell" id="mT7-Dx-Lz8" customClass="ProjectCell" customModule="Code_It" customModuleProvider="target">
                                         <rect key="frame" x="13" y="0.0" width="348" height="148"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="md6-wC-DIf">
@@ -680,7 +680,7 @@
         <!--Details Developer-->
         <scene sceneID="JJA-TZ-6SA">
             <objects>
-                <viewController storyboardIdentifier="DetailsDeveloper" id="KNs-F3-pxB" customClass="DetailsDeveloper" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsDeveloper" id="KNs-F3-pxB" customClass="DetailsDeveloper" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GIP-Zm-wfU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -772,18 +772,18 @@
         <!--Add Project-->
         <scene sceneID="agT-7L-XOT">
             <objects>
-                <viewController id="G73-uD-F5V" customClass="AddProject" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="G73-uD-F5V" customClass="AddProject" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ROm-Lf-Evo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العنوان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaP-wu-wup">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم المشروع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaP-wu-wup">
                                 <rect key="frame" x="20" y="115" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQq-vP-IxK">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="يجب ان يوضح الاسم حاجتك من المشروع " textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQq-vP-IxK">
                                 <rect key="frame" x="20" y="161.5" width="374" height="34"/>
                                 <color key="backgroundColor" name="Color-2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -801,19 +801,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وسيلة التواصل" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kun-WS-PFx">
-                                <rect key="frame" x="20" y="563.5" width="374" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="20" y="566" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المدة المتوقعة لانهاء المشروع ؟ " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpr-Lc-RVl">
-                                <rect key="frame" x="20" y="472.5" width="374" height="24"/>
+                                <rect key="frame" x="20" y="475" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="abV-Jq-BEU">
-                                <rect key="frame" x="20" y="511.5" width="374" height="32"/>
+                                <rect key="frame" x="20" y="514" width="374" height="32"/>
                                 <subviews>
                                     <stepper opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-6W-aPg">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
@@ -824,13 +824,13 @@
                                         </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="يوم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5u-7x-5ie">
-                                        <rect key="frame" x="129" y="0.0" width="178" height="32"/>
+                                        <rect key="frame" x="129" y="0.0" width="173" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TnE-yq-1Dz">
-                                        <rect key="frame" x="342" y="0.0" width="32" height="32"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TnE-yq-1Dz">
+                                        <rect key="frame" x="337" y="0.0" width="37" height="32"/>
                                         <color key="backgroundColor" name="Color-2"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -838,7 +838,7 @@
                                 </subviews>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OL6-VF-bhk">
-                                <rect key="frame" x="20" y="418.5" width="374" height="32"/>
+                                <rect key="frame" x="20" y="421" width="374" height="32"/>
                                 <color key="backgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="0.21661395389999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="تطبيقات الجوال"/>
@@ -850,19 +850,20 @@
                                 </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IGq-GU-qTg">
-                                <rect key="frame" x="20" y="263" width="374" height="130.5"/>
-                                <color key="backgroundColor" red="0.98376341540404044" green="0.98376341540404044" blue="0.98376341540404044" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="20" y="263" width="374" height="133"/>
+                                <color key="backgroundColor" name="Color-1"/>
                                 <color key="textColor" name="Color-1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التفاصيل" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnR-56-qcX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الوصف" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnR-56-qcX">
                                 <rect key="frame" x="20" y="215.5" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hny-NL-pct">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اكتب  رقم لتواصل او بريدك الالكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hny-NL-pct">
                                 <rect key="frame" x="20" y="610" width="374" height="34"/>
                                 <color key="backgroundColor" name="Color-2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -923,7 +924,7 @@
         <!--الملف الشخصي-->
         <scene sceneID="0rP-cY-Ck9">
             <objects>
-                <viewController storyboardIdentifier="ProfilViewController" modalPresentationStyle="fullScreen" id="tKa-MT-PmE" customClass="ProfilViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfilViewController" modalPresentationStyle="fullScreen" id="tKa-MT-PmE" customClass="ProfilViewController" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MFM-mO-21H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1037,7 +1038,7 @@
         <!--SettingVC-->
         <scene sceneID="Wmd-hc-keT">
             <objects>
-                <viewController id="r2U-PW-wif" customClass="SettingVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="r2U-PW-wif" customClass="SettingVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eSt-GP-ivD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1110,7 +1111,7 @@
         <!--Update ProfileVC-->
         <scene sceneID="K4w-Rt-KWn">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Mic-jb-WMa" customClass="UpdateProfileVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Mic-jb-WMa" customClass="UpdateProfileVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QBW-aR-1od">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1254,7 +1255,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1380,7 +1381,7 @@
         <!--Loge InVC-->
         <scene sceneID="sil-aR-BfQ">
             <objects>
-                <viewController id="4hH-oD-0GO" customClass="LogeInVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4hH-oD-0GO" customClass="LogeInVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cW2-mi-5uH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1410,7 +1411,7 @@
                                                                 <color key="textColor" name="Color"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="n@n.com" placeholder="ادخل البريد الالكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PW3-P6-Xfp">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ادخل البريد الالكتروني" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PW3-P6-Xfp">
                                                                 <rect key="frame" x="0.0" y="56.5" width="364" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1426,7 +1427,7 @@
                                                                 <color key="textColor" name="Color"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567" placeholder="ادخل كلمة المرور " textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZQ-df-kLe">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ادخل كلمة المرور " textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZQ-df-kLe">
                                                                 <rect key="frame" x="0.0" y="56.5" width="364" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -1503,7 +1504,7 @@
         <!--Forgot PasswordVC-->
         <scene sceneID="M09-SB-cll">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Fz5-nF-jtq" customClass="forgotPasswordVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Fz5-nF-jtq" customClass="forgotPasswordVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOg-cH-sQs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1593,7 +1594,7 @@
         <!--Client Tab Bar-->
         <scene sceneID="M7t-aH-2Wx">
             <objects>
-                <tabBarController storyboardIdentifier="ClientTabBar" automaticallyAdjustsScrollViewInsets="NO" id="x62-Xc-vh7" customClass="ClientTabBar" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="ClientTabBar" automaticallyAdjustsScrollViewInsets="NO" id="x62-Xc-vh7" customClass="ClientTabBar" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6du-dZ-B55">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1613,7 +1614,7 @@
         <!--Launch Screen2-->
         <scene sceneID="y5z-0e-Xzo">
             <objects>
-                <viewController id="B1y-SY-fj3" customClass="LaunchScreen2" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B1y-SY-fj3" customClass="LaunchScreen2" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rkj-D4-2ad">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1628,7 +1629,7 @@
         <!--Developer Tab Bar-->
         <scene sceneID="ADf-BS-ft2">
             <objects>
-                <tabBarController storyboardIdentifier="DeveloperTabBar" automaticallyAdjustsScrollViewInsets="NO" id="EG6-F9-acr" customClass="DeveloperTabBar" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="DeveloperTabBar" automaticallyAdjustsScrollViewInsets="NO" id="EG6-F9-acr" customClass="DeveloperTabBar" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UMf-9f-6e5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1702,7 +1703,7 @@
         <!--Update PasswordVC-->
         <scene sceneID="ZsH-ox-fM6">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="AQH-5O-FbZ" customClass="UpdatePasswordVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="AQH-5O-FbZ" customClass="UpdatePasswordVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NrG-BI-upu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1809,17 +1810,17 @@
         <!--Show Profile Users-->
         <scene sceneID="Z49-15-fWD">
             <objects>
-                <viewController storyboardIdentifier="ShowProfileUsers" id="jXU-MA-fhs" customClass="ShowProfileUsers" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowProfileUsers" id="jXU-MA-fhs" customClass="ShowProfileUsers" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2P-bj-cQ4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="2f0-eF-pN7">
-                                <rect key="frame" x="0.0" y="88" width="414" height="239"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="288"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqp-U5-8cw">
-                                <rect key="frame" x="20" y="278" width="374" height="466"/>
+                                <rect key="frame" x="20" y="278" width="374" height="515"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="EQQ-L2-uVl">
                                         <rect key="frame" x="20" y="34" width="334" height="92.5"/>
@@ -1842,16 +1843,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="97" translatesAutoresizingMaskIntoConstraints="NO" id="MOs-Cu-SHl">
-                                        <rect key="frame" x="20" y="146.5" width="334" height="299.5"/>
+                                        <rect key="frame" x="20" y="146.5" width="334" height="348.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="النبذه التعريفيّة " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5v5-08-V0E">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="101.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="126"/>
                                                 <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="موقع إلكتروني " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ka-bp-Bm5">
-                                                <rect key="frame" x="0.0" y="198.5" width="334" height="101"/>
+                                                <rect key="frame" x="0.0" y="223" width="334" height="125.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1901,7 +1902,7 @@
         <!--Show Edit Project-->
         <scene sceneID="7vK-dU-0hF">
             <objects>
-                <viewController id="Sx8-0Q-eTi" customClass="ShowEditProject" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Sx8-0Q-eTi" customClass="ShowEditProject" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w7x-sE-Gwq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1946,7 +1947,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommentCell" id="1mt-5M-e4p" customClass="CommentCell" customModule="finalProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommentCell" id="1mt-5M-e4p" customClass="CommentCell" customModule="Code_It" customModuleProvider="target">
                                         <rect key="frame" x="1.5" y="0.0" width="373" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dvF-Wc-PeG">
@@ -1974,6 +1975,7 @@
                                                     <rect key="frame" x="315" y="19" width="50" height="50"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" name="Color-1"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="pB5-px-vVa" secondAttribute="bottom" constant="8" id="BT6-Xz-Ivs"/>
                                                 <constraint firstItem="pB5-px-vVa" firstAttribute="top" secondItem="dvF-Wc-PeG" secondAttribute="top" constant="8" id="GhZ-Pq-Cmr"/>
@@ -1985,6 +1987,7 @@
                                                 <constraint firstItem="pB5-px-vVa" firstAttribute="leading" secondItem="dvF-Wc-PeG" secondAttribute="leading" constant="9" id="vLy-uH-Ibr"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="Color-1"/>
                                         <size key="customSize" width="373" height="89"/>
                                         <connections>
                                             <outlet property="comment" destination="LxE-d5-uEz" id="TIN-Ge-nb3"/>
@@ -2006,7 +2009,7 @@
                                 <color key="textColor" red="0.84883747590000003" green="0.83598069559999999" blue="0.86087566609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.84883747590000003" green="0.83598069559999999" blue="0.86087566609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التفاصيل" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTQ-zj-hbD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الوصف" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTQ-zj-hbD">
                                 <rect key="frame" x="21" y="316.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -2195,7 +2198,7 @@
         <!--Details Projects As GuestVC-->
         <scene sceneID="sjp-0J-OF7">
             <objects>
-                <viewController id="IDb-Lf-prs" customClass="DetailsProjectsAsGuestVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IDb-Lf-prs" customClass="DetailsProjectsAsGuestVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uUP-Qk-lqk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2240,7 +2243,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommentCell" id="PGv-h6-uvx" customClass="CommentCell" customModule="finalProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommentCell" id="PGv-h6-uvx" customClass="CommentCell" customModule="Code_It" customModuleProvider="target">
                                         <rect key="frame" x="1.5" y="0.0" width="373" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KFA-lY-rTC">
@@ -2317,7 +2320,7 @@
                                 <color key="textColor" red="0.39274553916958793" green="0.57580625259503471" blue="0.67464854625656567" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التفاصيل" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw3-zo-bhD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الوصف" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw3-zo-bhD">
                                 <rect key="frame" x="21" y="277" width="374" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="U3G-hm-StD"/>
@@ -2489,7 +2492,7 @@
         <!--المشاريع-->
         <scene sceneID="wEi-gD-0gx">
             <objects>
-                <viewController storyboardIdentifier="HomeGuestVC" modalPresentationStyle="fullScreen" id="BhK-Vj-xhR" customClass="HomeGuestVC" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeGuestVC" modalPresentationStyle="fullScreen" id="BhK-Vj-xhR" customClass="HomeGuestVC" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKR-r5-m1f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2512,7 +2515,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectCell" id="qHc-Ph-8RS" customClass="ProjectCell" customModule="finalProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProjectCell" id="qHc-Ph-8RS" customClass="ProjectCell" customModule="Code_It" customModuleProvider="target">
                                         <rect key="frame" x="13" y="0.0" width="348" height="148"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vDF-0K-oIF">
@@ -2608,7 +2611,7 @@
         <!--Guest Tab Bar-->
         <scene sceneID="Ogu-VB-Mtm">
             <objects>
-                <tabBarController storyboardIdentifier="GuestTabBar" automaticallyAdjustsScrollViewInsets="NO" id="eVh-DQ-JmJ" customClass="GuestTabBar" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="GuestTabBar" automaticallyAdjustsScrollViewInsets="NO" id="eVh-DQ-JmJ" customClass="GuestTabBar" customModule="Code_It" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W5v-47-nfL">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -2654,7 +2657,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NvM-il-Nve"/>
+        <segue reference="502-8p-Eti"/>
         <segue reference="lnE-TE-Qe0"/>
         <segue reference="YOg-8p-FJb"/>
         <segue reference="zBP-1q-YVn"/>

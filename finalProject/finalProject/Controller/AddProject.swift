@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class AddProject: UIViewController{
+class AddProject: UIViewController , UITextViewDelegate{
     
     @IBOutlet weak var detalisProject: UITextView!
     @IBOutlet weak var titleProject: UITextField!
@@ -35,7 +35,11 @@ class AddProject: UIViewController{
         stepper.wraps = true
         stepper.autorepeat = true
         stepper.maximumValue = 100
-        
+        detalisProject.delegate = self
+//        detalisProject.isScrollEnabled = false
+        detalisProject.text = "اكتب تفاصيل مشروعك ليتمكن المبرمج من فمهمه"
+        detalisProject.textColor = UIColor.lightGray
+        detalisProject.textAlignment = .right
         dateCreated = dateToSring()
     }
     
@@ -95,7 +99,6 @@ class AddProject: UIViewController{
         
         let Ref = self.db.collection("Projects")
         let Doc = Ref.document()
-        print("Doc",Doc.documentID)
         let data = [
             "ProjectID":Doc.documentID ,
             "emailUser"  : email! ,
@@ -115,11 +118,33 @@ class AddProject: UIViewController{
             }else {
                 
                 print("Successfully saved data")
-                //                        self.project.append(Projects(nameProject: titleProject.text!, detailsProject: detalisProject.text!, Deadline: valueLabel.text!, ConnectionTool: self.connectionTool.text!, DateCreated: "\(Date.now)", specializayion: ""))
+            
+            }
+        }
+    }
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = detalisProject.sizeThatFits(size)
+        detalisProject.constraints.forEach { constraint in
+            if constraint.firstAttribute == .height {
+                constraint.constant = estimatedSize.height
             }
         }
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if detalisProject.textColor == UIColor.lightGray {
+            detalisProject.text = nil
+            detalisProject.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if detalisProject.text.isEmpty {
+            detalisProject.text = "اكتب تفاصيل مشروعك ليتمكن المبرمج من فمهمه"
+            detalisProject.textColor = UIColor.lightGray
+        }
+    }
 }
 
 

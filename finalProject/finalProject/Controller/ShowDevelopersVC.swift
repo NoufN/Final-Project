@@ -61,6 +61,12 @@ class ShowDevelopersVC: UIViewController, UICollectionViewDataSource, UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (self.developer.count == 0) {
+            self.collectionView.setEmptyMessage("حدث خطاء")
+           } else {
+               self.collectionView.restore()
+           }
+
         return developer.count
     }
     
@@ -80,15 +86,14 @@ class ShowDevelopersVC: UIViewController, UICollectionViewDataSource, UICollecti
                 
             }
         }
-        
-        
-        cell.layer.cornerRadius = 15
+        cell.layer.cornerRadius = 20
         cell.layer.borderWidth = 0.1
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 10)
-        cell.layer.shadowRadius = 5
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
+        cell.layer.shadowRadius = 1
         cell.layer.shadowOpacity =  0.50
         cell.layer.masksToBounds = false
+       
         
         cell.imageUser.layer.borderWidth = 1
         cell.imageUser.layer.masksToBounds = true
@@ -114,26 +119,28 @@ class ShowDevelopersVC: UIViewController, UICollectionViewDataSource, UICollecti
         }
     }
     
-    //    func collectionView(_ collectionView: UICollectionView,
-    //                        layout collectionViewLayout: UICollectionViewLayout,
-    //                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
-    //        return 5
-    //    }
-    //    
-    //    func collectionView(_ collectionView: UICollectionView,
-    //                        layout collectionViewLayout: UICollectionViewLayout,
-    //                        minimumLineSpacingForSectionAt section: Int) -> CGFloat{
-    //        
-    //        return 10
-    //    }
-    //    
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    //        return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
-    //    }
-    //    
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    //    {
-    //        return CGSize(width: 186, height: 169)
-    //
-    //    }
+  
+    func collectionView(_ collectionView: UICollectionView,
+                           layout collectionViewLayout: UICollectionViewLayout,
+                                  minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
+        return 0.1
+     }
+ 
+      func collectionView(_ collectionView: UICollectionView,
+                           layout collectionViewLayout: UICollectionViewLayout,
+                             minimumLineSpacingForSectionAt section: Int) -> CGFloat{
+         
+          return 10
+     }
+     
+     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+         return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+     }
+
+    
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+          {
+              return CGSize(width: self.view.frame.width * 0.45 , height: self.view.frame.width * 0.45 )
+              
+          }
 }

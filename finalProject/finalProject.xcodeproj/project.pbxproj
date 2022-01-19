@@ -36,6 +36,7 @@
 		1E73F0B72795E1C800E7D28C /* LaunchScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73F0B62795E1C800E7D28C /* LaunchScreen2.swift */; };
 		1E73F0B92795EFF700E7D28C /* GuestTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73F0B82795EFF700E7D28C /* GuestTabBar.swift */; };
 		1EAE7E1A27973B080042EDB0 /* viewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7E1927973B080042EDB0 /* viewController.swift */; };
+		1EAE7E25279818D90042EDB0 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7E24279818D90042EDB0 /* CollectionView.swift */; };
 		1ED0479F2782DF4C0088014E /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0479E2782DF4C0088014E /* UpdateProfileVC.swift */; };
 		1ED047A127834E360088014E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047A027834E360088014E /* Error.swift */; };
 		1ED047A3278424690088014E /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047A2278424690088014E /* SettingVC.swift */; };
@@ -54,7 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E240DF9277E190F0025FDDD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E240DF9277E190F0025FDDD /* Code It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E240DFC277E190F0025FDDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E240DFE277E190F0025FDDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E240E00277E190F0025FDDD /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		1E73F0B62795E1C800E7D28C /* LaunchScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen2.swift; sourceTree = "<group>"; usesTabs = 0; };
 		1E73F0B82795EFF700E7D28C /* GuestTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTabBar.swift; sourceTree = "<group>"; };
 		1EAE7E1927973B080042EDB0 /* viewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewController.swift; sourceTree = "<group>"; };
+		1EAE7E24279818D90042EDB0 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		1ED0479E2782DF4C0088014E /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
 		1ED047A027834E360088014E /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1ED047A2278424690088014E /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
@@ -125,7 +127,7 @@
 		1E240DFA277E190F0025FDDD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E240DF9277E190F0025FDDD /* finalProject.app */,
+				1E240DF9277E190F0025FDDD /* Code It.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,6 +211,7 @@
 				1ED047A027834E360088014E /* Error.swift */,
 				1ED047B22784B5950088014E /* Date.swift */,
 				1EAE7E1927973B080042EDB0 /* viewController.swift */,
+				1EAE7E24279818D90042EDB0 /* CollectionView.swift */,
 				1EE4FF122788492B0024A245 /* TextFiled.swift */,
 			);
 			path = Extensions;
@@ -227,9 +230,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E240DF8277E190F0025FDDD /* finalProject */ = {
+		1E240DF8277E190F0025FDDD /* Code It */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E240E0D277E19140025FDDD /* Build configuration list for PBXNativeTarget "finalProject" */;
+			buildConfigurationList = 1E240E0D277E19140025FDDD /* Build configuration list for PBXNativeTarget "Code It" */;
 			buildPhases = (
 				1E240DF5277E190F0025FDDD /* Sources */,
 				1E240DF6277E190F0025FDDD /* Frameworks */,
@@ -239,7 +242,7 @@
 			);
 			dependencies = (
 			);
-			name = finalProject;
+			name = "Code It";
 			packageProductDependencies = (
 				1E240E13277E26210025FDDD /* FirebaseAuth */,
 				1E240E15277E26210025FDDD /* FirebaseDatabase */,
@@ -248,7 +251,7 @@
 				1E240E1E277E456F0025FDDD /* FirebaseFunctions */,
 			);
 			productName = finalProject;
-			productReference = 1E240DF9277E190F0025FDDD /* finalProject.app */;
+			productReference = 1E240DF9277E190F0025FDDD /* Code It.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -282,7 +285,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E240DF8277E190F0025FDDD /* finalProject */,
+				1E240DF8277E190F0025FDDD /* Code It */,
 			);
 		};
 /* End PBXProject section */
@@ -337,6 +340,7 @@
 				1E240E01277E190F0025FDDD /* SignUpVC.swift in Sources */,
 				1ED0479F2782DF4C0088014E /* UpdateProfileVC.swift in Sources */,
 				1E240DFD277E190F0025FDDD /* AppDelegate.swift in Sources */,
+				1EAE7E25279818D90042EDB0 /* CollectionView.swift in Sources */,
 				1ED047A927842ADD0088014E /* UpdatePasswordVC.swift in Sources */,
 				1ED047A127834E360088014E /* Error.swift in Sources */,
 				1E6DC061278740090002990E /* ShowProfileUsers.swift in Sources */,
@@ -492,6 +496,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = finalProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Code It";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -520,6 +525,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = finalProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Code It";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -550,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E240E0D277E19140025FDDD /* Build configuration list for PBXNativeTarget "finalProject" */ = {
+		1E240E0D277E19140025FDDD /* Build configuration list for PBXNativeTarget "Code It" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E240E0E277E19140025FDDD /* Debug */,

@@ -113,6 +113,11 @@ class HomeGuestVC: UIViewController ,  UICollectionViewDelegate, UICollectionVie
     // collection View
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (self.projects.count == 0) {
+            self.collectionView.setEmptyMessage("لا توجد مشاريع او حدث خطاء")
+           } else {
+               self.collectionView.restore()
+           }
         return filteredData.count
     }
     

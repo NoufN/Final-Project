@@ -105,7 +105,16 @@ class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UIColl
     // collection View
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+        
+        if (self.filteredData.count == 0) {
+            self.collectionView.setEmptyMessage("لا توجد مشاريع")
+           } else {
+               self.collectionView.restore()
+           }
+
         return filteredData.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -151,5 +160,4 @@ class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UIColl
     
     
 }
-
 

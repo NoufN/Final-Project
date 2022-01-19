@@ -19,7 +19,7 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
     @IBOutlet weak var addProjectButton: UIButton!
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var project: UISegmentedControl!
-    @IBOutlet weak var label: UILabel!
+
     
     var selected : Projects? = nil
     
@@ -130,6 +130,13 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+        if (self.projects.count == 0) {
+            self.collectionView.setEmptyMessage("لا توجد مشاريع")
+           } else {
+               self.collectionView.restore()
+           }
+
         return projects.count
     }
     
