@@ -32,25 +32,25 @@ class DetailsDeveloper: UIViewController {
     }
     
     func getImage(imgStr: String )  {
-
+        
         let url = "gs://finalproject-46146.appspot.com/images/" + "\(imgStr)"
         let Ref = Storage.storage().reference(forURL: url)
         Ref.getData(maxSize:  1024 * 1024) { data, error in
             if error != nil {
                 print("Error: Image could not download!")
             } else {
-        
+                
                 self.imageUser.image = UIImage(data: data!)!
-//                self.imageUser.layer.borderWidth = 1
-//                self.imageUser.layer.masksToBounds = true
-//                self.imageUser.layer.borderColor = UIColor.gray.cgColor
-//                self.imageUser.layer.cornerRadius = self.imageUser.frame.width/2
-//                self.imageUser.clipsToBounds = true
+                //                self.imageUser.layer.borderWidth = 1
+                //                self.imageUser.layer.masksToBounds = true
+                //                self.imageUser.layer.borderColor = UIColor.gray.cgColor
+                //                self.imageUser.layer.cornerRadius = self.imageUser.frame.width/2
+                //                self.imageUser.clipsToBounds = true
                 self.imageUser.contentMode = .scaleToFill
             }
         }
-
+        
     }
-
-
+    
+    
 }

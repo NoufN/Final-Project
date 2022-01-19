@@ -61,9 +61,9 @@ class DetailsProjectsVC: UIViewController, UICollectionViewDataSource , UICollec
         loadComment()
     }
     
-
+    
     // get all user from  Firebase
- 
+    
     func getUser()  {
         if let emailUser = emailUser {
             db.collection("Users").document(emailUser).getDocument{ documentSnapshot, error in
@@ -82,17 +82,17 @@ class DetailsProjectsVC: UIViewController, UICollectionViewDataSource , UICollec
         }
     }
     
-//     comment functions
+    //     comment functions
     @IBAction func sendComment(_ sender: Any) {
         
         if comment.text != "" {
-
+            
             addComment()
         } else {
             
             comment.placeholder = "فشل الارسال"
         }
-       
+        
         
     }
     
@@ -149,7 +149,7 @@ class DetailsProjectsVC: UIViewController, UICollectionViewDataSource , UICollec
     
     
     
-// collection View Functions
+    // collection View Functions
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selected = comments[indexPath.row].email
         performSegue(withIdentifier: "show", sender: nil)
@@ -203,18 +203,18 @@ class DetailsProjectsVC: UIViewController, UICollectionViewDataSource , UICollec
         
         return cell
     }
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        sizeForItemAt indexPath: IndexPath) -> CGSize{
-//
-//        return CGSize(width:  (commentCollection.layer.bounds.width )  , height: (view.layer.bounds.height)
-//                      * 0.3)
-//
-//    }
+    //    func collectionView(_ collectionView: UICollectionView,
+    //                        layout collectionViewLayout: UICollectionViewLayout,
+    //                        sizeForItemAt indexPath: IndexPath) -> CGSize{
+    //
+    //        return CGSize(width:  (commentCollection.layer.bounds.width )  , height: (view.layer.bounds.height)
+    //                      * 0.3)
+    //
+    //    }
     
     
     
-//     function geet image from fierbase
+    //     function geet image from fierbase
     
     func getImage(imgStr: String )  {
         

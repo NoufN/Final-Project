@@ -24,7 +24,7 @@ extension AuthErrorCode {
         case .userNotFound:
                 return "لم يتم العثور على حساب مستخدم"
         case .networkError:
-                return "حدث خطأ في الشبكة. حاول مرة اخرى"
+                return "حدث خطأ في الشبكة حاول مرة اخرى"
         case .weakPassword:
                 return "كلمة المرور ضعيفه"
         case .missingEmail:

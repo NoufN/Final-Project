@@ -43,10 +43,17 @@ class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UIColl
     
     func  loadAllProjects(){
         projects.removeAll()
-        db.collection("Projects").getDocuments { (querySnapshot, error) in
+        db.collection("Projects").order(by: "DateCreated", descending: true).addSnapshotListener{(querySnapshot, error) in
             
             if let err = error {
                 print("Error getting documents: \(err.localizedDescription)")
+                if self.projects.isEmpty {
+                    self.collectionView.isHidden = true
+                    let label = UILabel(frame: CGRect(x: 0, y: 0,width: self.collectionView.layer.bounds.width , height: self.collectionView.layer.bounds.height))
+                    label.text = "حدث خطاء"
+//                    label.textColor = .black
+                    self.view.addSubview(label)
+                }
             } else {
                 self.projects.removeAll()
                 for document in querySnapshot!.documents {
@@ -64,36 +71,36 @@ class HomeForDevelopersVC: UIViewController  ,  UICollectionViewDelegate, UIColl
     }
     
     // search Bar
-
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            filteredData = [Projects]()
-            if searchBar.text == "" {
-                filteredData = projects
-                loadAllProjects()
-            }else{
-                for project in projects {
-                    let name = project.nameProject.lowercased()
-                    let details = project.detailsProject.lowercased()
-                    if name.contains(searchBar.text!.lowercased()  ) ||  details.contains(searchBar.text!.lowercased() ){
     
-                        filteredData?.append(project)
-                 
-                    }
-                   
-                }
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredData = [Projects]()
+        if searchBar.text == "" {
+            filteredData = projects
+            loadAllProjects()
+        }else{
+            for project in projects {
+                let name = project.nameProject.lowercased()
+                let details = project.detailsProject.lowercased()
+                if name.contains(searchBar.text!.lowercased()  ) ||  details.contains(searchBar.text!.lowercased() ){
+                    
+                    filteredData?.append(project)
                     
                 }
+                
             }
-    
-    
-    
-    
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                
+            }
         }
+        
+        
+        
+        
+    }
     
     
- 
+    
     
     // collection View
     

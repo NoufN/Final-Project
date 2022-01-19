@@ -35,6 +35,7 @@
 		1E73F0B32795768C00E7D28C /* NotoNaskhArabic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E73F0B22795768C00E7D28C /* NotoNaskhArabic-VariableFont_wght.ttf */; };
 		1E73F0B72795E1C800E7D28C /* LaunchScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73F0B62795E1C800E7D28C /* LaunchScreen2.swift */; };
 		1E73F0B92795EFF700E7D28C /* GuestTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73F0B82795EFF700E7D28C /* GuestTabBar.swift */; };
+		1EAE7E1A27973B080042EDB0 /* viewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE7E1927973B080042EDB0 /* viewController.swift */; };
 		1ED0479F2782DF4C0088014E /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED0479E2782DF4C0088014E /* UpdateProfileVC.swift */; };
 		1ED047A127834E360088014E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047A027834E360088014E /* Error.swift */; };
 		1ED047A3278424690088014E /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED047A2278424690088014E /* SettingVC.swift */; };
@@ -78,6 +79,7 @@
 		1E73F0B22795768C00E7D28C /* NotoNaskhArabic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoNaskhArabic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		1E73F0B62795E1C800E7D28C /* LaunchScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen2.swift; sourceTree = "<group>"; usesTabs = 0; };
 		1E73F0B82795EFF700E7D28C /* GuestTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTabBar.swift; sourceTree = "<group>"; };
+		1EAE7E1927973B080042EDB0 /* viewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewController.swift; sourceTree = "<group>"; };
 		1ED0479E2782DF4C0088014E /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
 		1ED047A027834E360088014E /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1ED047A2278424690088014E /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				1ED047A027834E360088014E /* Error.swift */,
 				1ED047B22784B5950088014E /* Date.swift */,
+				1EAE7E1927973B080042EDB0 /* viewController.swift */,
 				1EE4FF122788492B0024A245 /* TextFiled.swift */,
 			);
 			path = Extensions;
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EAE7E1A27973B080042EDB0 /* viewController.swift in Sources */,
 				1ED047B12784AEF00088014E /* ConvertDate.swift in Sources */,
 				1E240E2527806A2D0025FDDD /* forgotPasswordVC.swift in Sources */,
 				1E73F0B72795E1C800E7D28C /* LaunchScreen2.swift in Sources */,

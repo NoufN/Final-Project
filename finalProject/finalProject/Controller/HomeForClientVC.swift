@@ -19,10 +19,11 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
     @IBOutlet weak var addProjectButton: UIButton!
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var project: UISegmentedControl!
+    @IBOutlet weak var label: UILabel!
     
     var selected : Projects? = nil
     
-  
+    
     let db = Firestore.firestore()
     let email = Auth.auth().currentUser?.email
     var id = ""
@@ -34,7 +35,7 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
         collectionView.dataSource = self
         addProjectButton.layer.cornerRadius = 0.5 * addProjectButton.bounds.size.width
         addProjectButton.clipsToBounds = true
-     
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -74,24 +75,24 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
     
     func  loadAllProjects(){
         projects.removeAll()
-        db.collection("Projects").getDocuments { (querySnapshot, error) in
+        db.collection("Projects").order(by: "DateCreated", descending: true).addSnapshotListener{(querySnapshot, error) in
             
             if let err = error {
                 print("Error getting documents: \(err.localizedDescription)")
+                if self.projects.isEmpty {
+                    self.collectionView.isHidden = true
+                    let label = UILabel(frame: CGRect(x: 0, y: 0,width: self.collectionView.layer.bounds.width , height: self.collectionView.layer.bounds.height))
+                    label.text = "حدث خطاء"
+//                    label.textColor = .black
+                    self.view.addSubview(label)
+                }
             } else {
                 self.projects.removeAll()
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     
-                    
                     self.projects.append(Projects(IdProject:data["ProjectID"] as? String ?? "" , nameProject: data["Title"] as? String ?? "", detailsProject: data["Details"] as? String ?? "", Deadline: data["Deadline"] as? String ?? "" , ConnectionTool: data["ConnectionTool"] as? String ?? "", DateCreated: data["DateCreated"] as? String ?? "", specializayion:  data["specializayion"] as? String ?? "", nameUser:  data["nameUser"] as? String ?? "", email: data["emailUser"] as? String ?? "", image: data["imageProfile"] as? String ?? ""))
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                
                 }
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
@@ -107,13 +108,16 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
             
             if let err = error {
                 print("Error getting documents: \(err.localizedDescription)")
+                
+             
+                
             } else {
                 self.projects.removeAll()
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     
                     self.projects.append(Projects(IdProject:data["ProjectID"] as? String ?? "" , nameProject: data["Title"] as? String ?? "", detailsProject: data["Details"] as? String ?? "", Deadline: data["Deadline"] as? String ?? "" , ConnectionTool: data["ConnectionTool"] as? String ?? "", DateCreated: data["DateCreated"] as? String ?? "", specializayion:  data["specializayion"] as? String ?? "", nameUser:  data["nameUser"] as? String ?? "", email: data["emailUser"] as? String ?? "", image: data["imageProfile"] as? String ?? ""))
-              
+                    
                 }
                 
                 DispatchQueue.main.async {
@@ -121,7 +125,9 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
                     
                 }
             }
+            
         }
+       
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return projects.count
@@ -179,5 +185,5 @@ class HomeForClientVC: UIViewController, UICollectionViewDelegate, UICollectionV
         return CGSize(width:  collectionView.layer.bounds.width , height: (view.layer.bounds.height)/6)
         
     }
- 
+    
 }

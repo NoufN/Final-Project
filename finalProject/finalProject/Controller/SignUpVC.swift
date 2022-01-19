@@ -10,13 +10,13 @@ import Firebase
 import SwiftUI
 
 class ViewController: UIViewController {
- 
+    
     
     @IBOutlet weak var nameUser: UITextField!
     @IBOutlet weak var emilUser: UITextField!
     @IBOutlet weak var passwordUser: UITextField!
     @IBOutlet weak var userType: UISegmentedControl!
-   var    showPasswordButton = UIButton()
+    var    showPasswordButton = UIButton()
     var user : String =  "Developers"
     var client = [Client]()
     var developers = [Developers]()
@@ -24,32 +24,33 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-
+        
+        hideKeyboardWhenTappedAround()
+        
         nameUser.customTextfield()
         nameUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
         emilUser.customTextfield()
-      emilUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
+        emilUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
         passwordUser.customTextfield()
         passwordUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
-       
+        
     }
- 
+    
     
     @IBAction func indexChanged(sender:Any) {
         switch userType.selectedSegmentIndex
         {
         case 0:
             user = "Developers"
-
+            
         case 1:
             user = "Client"
-
+            
         default:
             break;
         }
     }
-
+    
     
     @IBAction func signUpAction(_ sender: Any) {
         if emilUser.text != "" && passwordUser.text != "" {
@@ -72,7 +73,7 @@ class ViewController: UIViewController {
                     } else if self.user == "Developers"  {
                         
                         self.addUser(taypUser: self.user , emailUser: self.self.emilUser.text!)
-                 
+                        
                         let tabBar = self.storyboard?.instantiateViewController(withIdentifier: "DeveloperTabBar")
                         as! DeveloperTabBar
                         tabBar.modalPresentationStyle = .fullScreen
@@ -86,16 +87,16 @@ class ViewController: UIViewController {
         }else {
             let alert = UIAlertController(title: "عذرًا", message:"يجب عليك ملىء كل الحقول المطلوبة", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "نعم", style: .default) { _ in })
-
+            
             present(alert, animated: true, completion: nil)
         }
-        }
-        
+    }
     
     
-
+    
+    
     func addUser(taypUser: String , emailUser : String) {
-    
+        
         if taypUser == "Client" {
             
             db.collection("Users").document(emailUser).setData(
@@ -154,7 +155,7 @@ class ViewController: UIViewController {
     }
     
     
-
+    
     
 }
 

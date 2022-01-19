@@ -46,21 +46,21 @@ class SettingVC: UIViewController {
                 if let err = err {
                     print("Error removing document: \(err.localizedDescription)")
                 } else {
-                
+                    
                     user?.delete { error in
                         if let error = error {
                             print(error.localizedDescription)
                         } else {
                             Auth.auth().currentUser?.delete()
                             
-                        
+                            
                             self.dismiss(animated: true, completion: nil)
                         }
                     }
                 }
             }
             
-           
+            
             
             
         }

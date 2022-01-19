@@ -109,10 +109,8 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.97696509730000003" green="0.96747999920000005" blue="0.9864501953" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" image="plus" catalog="system">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
+                                <buttonConfiguration key="configuration" style="gray" image="plus" catalog="system" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background"/>
                                     <color key="baseBackgroundColor" red="0.39274553919999999" green="0.57580625259999996" blue="0.67464854630000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -152,7 +150,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6028.985507246377" y="144.64285714285714"/>
+            <point key="canvasLocation" x="2641" y="20"/>
         </scene>
         <!--Details ProjectsVC-->
         <scene sceneID="w7o-zF-5Vo">
@@ -169,7 +167,7 @@
                                     <constraint firstAttribute="height" constant="32" id="tTB-O1-FV3"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="ارسال">
+                                <buttonConfiguration key="configuration" style="gray" title="ارسال" cornerStyle="capsule">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -179,6 +177,7 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="اكتب تعليق " textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tKH-uf-sPz">
                                 <rect key="frame" x="30" y="780" width="289" height="34"/>
+                                <color key="backgroundColor" name="Color-2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="xfd-3f-h7L"/>
                                 </constraints>
@@ -319,7 +318,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="example@example.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-fV-Qha">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="example@example.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-fV-Qha">
                                 <rect key="frame" x="25" y="541" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -393,7 +392,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="التعليقات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjd-Rj-y10">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التعليقات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjd-Rj-y10">
                                 <rect key="frame" x="332" y="574.5" width="68.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -477,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="em8-gO-xvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4953.6231884057979" y="205.58035714285714"/>
+            <point key="canvasLocation" x="2397" y="765"/>
         </scene>
         <!--المبرمجين-->
         <scene sceneID="kI6-XK-7qb">
@@ -565,7 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUy-eT-luW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8615.9420289855079" y="1680.8035714285713"/>
+            <point key="canvasLocation" x="5217" y="1681"/>
         </scene>
         <!--المشاريع-->
         <scene sceneID="iAN-zT-Yn6">
@@ -676,7 +675,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aED-ZV-ew9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2208.695652173913" y="1457.8125"/>
+            <point key="canvasLocation" x="2396" y="1704"/>
         </scene>
         <!--Details Developer-->
         <scene sceneID="JJA-TZ-6SA">
@@ -768,7 +767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAz-KI-Rxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9363.7681159420299" y="1680.8035714285713"/>
+            <point key="canvasLocation" x="5897" y="1681"/>
         </scene>
         <!--Add Project-->
         <scene sceneID="agT-7L-XOT">
@@ -786,13 +785,14 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQq-vP-IxK">
                                 <rect key="frame" x="20" y="161.5" width="374" height="34"/>
+                                <color key="backgroundColor" name="Color-2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xm-57-3IA">
                                 <rect key="frame" x="20" y="671" width="374" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="نشر">
+                                <buttonConfiguration key="configuration" style="gray" title="نشر" cornerStyle="capsule">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -831,6 +831,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TnE-yq-1Dz">
                                         <rect key="frame" x="342" y="0.0" width="32" height="32"/>
+                                        <color key="backgroundColor" name="Color-2"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -863,6 +864,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hny-NL-pct">
                                 <rect key="frame" x="20" y="610" width="374" height="34"/>
+                                <color key="backgroundColor" name="Color-2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -916,7 +918,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="263-dZ-aH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7057.971014492754" y="23.4375"/>
+            <point key="canvasLocation" x="3086" y="765"/>
         </scene>
         <!--الملف الشخصي-->
         <scene sceneID="0rP-cY-Ck9">
@@ -999,7 +1001,8 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="الملف الشخصي" id="jeo-7n-11I">
-                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="zME-YK-xlE">
+                        <barButtonItem key="leftBarButtonItem" title="تسجيل الخروج" id="zME-YK-xlE">
+                            <color key="tintColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="signOut:" destination="tKa-MT-PmE" id="66S-6d-egT"/>
                             </connections>
@@ -1045,7 +1048,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1z-En-jC2">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="تسجيل الخروج">
+                                        <buttonConfiguration key="configuration" style="gray" title="تسجيل الخروج" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.52507495260000003" green="0.76981508539999999" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -1056,7 +1059,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpm-nj-oei">
                                         <rect key="frame" x="0.0" y="54" width="374" height="40"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="تحديث الملف الشخصي">
+                                        <buttonConfiguration key="configuration" style="gray" title="تحديث الملف الشخصي" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.52507495260000003" green="0.76981508539999999" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -1067,7 +1070,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-zo-J2Q">
                                         <rect key="frame" x="0.0" y="108" width="374" height="40"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="تحديث كلمة المرور">
+                                        <buttonConfiguration key="configuration" style="gray" title="تحديث كلمة المرور" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.52507495260000003" green="0.76981508539999999" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -1078,7 +1081,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7c-jS-POv">
                                         <rect key="frame" x="0.0" y="162" width="374" height="40"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="حذف الحساب نهائي">
+                                        <buttonConfiguration key="configuration" style="gray" title="حذف الحساب نهائي" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -1205,7 +1208,7 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liK-27-oV6">
                                 <rect key="frame" x="75" y="742.5" width="265" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="حفظ">
+                                <buttonConfiguration key="configuration" style="gray" title="حفظ" cornerStyle="capsule">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -1246,7 +1249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8t1-Hq-1dk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8533" y="349"/>
+            <point key="canvasLocation" x="9422" y="280"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1335,7 +1338,7 @@
                                     <constraint firstAttribute="height" constant="40" id="kpd-Lw-yMH"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="تسجيل ">
+                                <buttonConfiguration key="configuration" style="gray" title="تسجيل " cornerStyle="capsule">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -1372,7 +1375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6102.898550724638" y="895.98214285714278"/>
+            <point key="canvasLocation" x="-1691" y="674"/>
         </scene>
         <!--Loge InVC-->
         <scene sceneID="sil-aR-BfQ">
@@ -1438,7 +1441,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="mAD-aZ-C93"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="تسجيل دخول">
+                                                <buttonConfiguration key="configuration" style="gray" title="تسجيل دخول" cornerStyle="capsule">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
@@ -1495,7 +1498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5IC-WN-kM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5430" y="979"/>
+            <point key="canvasLocation" x="-1690" y="-60"/>
         </scene>
         <!--Forgot PasswordVC-->
         <scene sceneID="M09-SB-cll">
@@ -1527,7 +1530,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwp-0n-ycO">
                                         <rect key="frame" x="0.0" y="104" width="364" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="اعادة تعين">
+                                        <buttonConfiguration key="configuration" style="gray" title="اعادة تعين" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -1566,7 +1569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brK-ES-x1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3019" y="638"/>
+            <point key="canvasLocation" x="-933" y="-3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hCw-z9-ECx">
@@ -1585,7 +1588,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oyc-5N-kyY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="2130"/>
+            <point key="canvasLocation" x="-2548" y="798"/>
         </scene>
         <!--Client Tab Bar-->
         <scene sceneID="M7t-aH-2Wx">
@@ -1605,7 +1608,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qr2-mU-JfU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="-461"/>
+            <point key="canvasLocation" x="916" y="518"/>
         </scene>
         <!--Launch Screen2-->
         <scene sceneID="y5z-0e-Xzo">
@@ -1620,7 +1623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxc-1L-Vwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="492"/>
+            <point key="canvasLocation" x="-3691" y="798"/>
         </scene>
         <!--Developer Tab Bar-->
         <scene sceneID="ADf-BS-ft2">
@@ -1640,7 +1643,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEZ-a9-KXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="492"/>
+            <point key="canvasLocation" x="916" y="1704"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JB5-2z-RId">
@@ -1694,7 +1697,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ul1-Or-iPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7848" y="1681"/>
+            <point key="canvasLocation" x="4367" y="1704"/>
         </scene>
         <!--Update PasswordVC-->
         <scene sceneID="ZsH-ox-fM6">
@@ -1721,7 +1724,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISV-cK-D71">
                                         <rect key="frame" x="0.0" y="122" width="374" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="تحديث كلمة المرور ">
+                                        <buttonConfiguration key="configuration" style="gray" title="تحديث كلمة المرور " cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -1747,7 +1750,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJm-nT-ERJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10076.8115942029" y="279.91071428571428"/>
+            <point key="canvasLocation" x="10290" y="280"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xto-xb-aNa">
@@ -1774,7 +1777,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeM-BC-hc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3876.811594202899" y="-208.25892857142856"/>
+            <point key="canvasLocation" x="1884" y="19"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PaX-Un-UfT">
@@ -1801,7 +1804,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mO-yE-awD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="1418"/>
+            <point key="canvasLocation" x="1726" y="1704"/>
         </scene>
         <!--Show Profile Users-->
         <scene sceneID="Z49-15-fWD">
@@ -1812,11 +1815,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="2f0-eF-pN7">
-                                <rect key="frame" x="0.0" y="88" width="414" height="288"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="239"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqp-U5-8cw">
-                                <rect key="frame" x="20" y="278" width="374" height="515"/>
+                                <rect key="frame" x="20" y="278" width="374" height="466"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="EQQ-L2-uVl">
                                         <rect key="frame" x="20" y="34" width="334" height="92.5"/>
@@ -1839,16 +1842,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="97" translatesAutoresizingMaskIntoConstraints="NO" id="MOs-Cu-SHl">
-                                        <rect key="frame" x="20" y="146.5" width="334" height="348.5"/>
+                                        <rect key="frame" x="20" y="146.5" width="334" height="299.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="النبذه التعريفيّة " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5v5-08-V0E">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="126"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="101.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="موقع إلكتروني " textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ka-bp-Bm5">
-                                                <rect key="frame" x="0.0" y="223" width="334" height="125.5"/>
+                                                <rect key="frame" x="0.0" y="198.5" width="334" height="101"/>
                                                 <fontDescription key="fontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1893,7 +1896,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coB-hc-Fpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8450.7246376811599" y="2418.75"/>
+            <point key="canvasLocation" x="436" y="2816"/>
         </scene>
         <!--Show Edit Project-->
         <scene sceneID="7vK-dU-0hF">
@@ -2045,7 +2048,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWG-H3-o91">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="حفظ">
+                                        <buttonConfiguration key="configuration" style="gray" title="حفظ" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -2056,7 +2059,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvF-Oc-uc0">
                                         <rect key="frame" x="123" y="0.0" width="83" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="حذف">
+                                        <buttonConfiguration key="configuration" style="gray" title="حذف" cornerStyle="capsule">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.52941179279999995" green="0.77254903320000001" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -2068,6 +2071,7 @@
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZm-sK-yzL">
                                 <rect key="frame" x="20" y="179" width="374" height="34"/>
+                                <color key="backgroundColor" name="Color-2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -2086,7 +2090,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="65m-gD-jNO">
                                 <rect key="frame" x="20" y="378.5" width="374" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="Color-1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="yKd-LW-CnK"/>
                                 </constraints>
@@ -2096,6 +2100,7 @@
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60R-ob-Nv9">
                                 <rect key="frame" x="20" y="567" width="374" height="34"/>
+                                <color key="backgroundColor" name="Color-2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -2110,6 +2115,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-6F-tP0">
                                 <rect key="frame" x="298" y="263" width="86" height="34"/>
+                                <color key="backgroundColor" name="Color-2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -2184,7 +2190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iZ-jv-xbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7848" y="407"/>
+            <point key="canvasLocation" x="3359" y="19"/>
         </scene>
         <!--Details Projects As GuestVC-->
         <scene sceneID="sjp-0J-OF7">
@@ -2478,7 +2484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHi-ti-ZOS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7716" y="3319"/>
+            <point key="canvasLocation" x="-623" y="2816"/>
         </scene>
         <!--المشاريع-->
         <scene sceneID="wEi-gD-0gx">
@@ -2597,7 +2603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxv-Pm-nb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="2129"/>
+            <point key="canvasLocation" x="-623" y="2079"/>
         </scene>
         <!--Guest Tab Bar-->
         <scene sceneID="Ogu-VB-Mtm">
@@ -2615,7 +2621,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ca-1a-f0Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6922" y="1681"/>
+            <point key="canvasLocation" x="-2204" y="2079"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cJO-eh-qck">
@@ -2644,14 +2650,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hj0-Oz-Fh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6922" y="2420"/>
+            <point key="canvasLocation" x="-1423" y="2079"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="NvM-il-Nve"/>
-        <segue reference="Q6S-R7-P9a"/>
-        <segue reference="R6r-Ss-8du"/>
-        <segue reference="sA2-yg-fKP"/>
+        <segue reference="lnE-TE-Qe0"/>
+        <segue reference="YOg-8p-FJb"/>
+        <segue reference="zBP-1q-YVn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
@@ -2663,10 +2669,10 @@
         <image name="swiftpm_step3.png" width="1463" height="916"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <namedColor name="Color">
-            <color red="0.043137259779999999" green="0.098039209840000002" blue="0.19607841970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.043000001460313797" green="0.097999997437000275" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Color-1">
-            <color red="0.97254908080000002" green="0.97254908080000002" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Color-2">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

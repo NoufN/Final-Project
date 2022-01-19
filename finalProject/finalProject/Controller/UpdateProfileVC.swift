@@ -20,6 +20,7 @@ class UpdateProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         
         imageProfile.layer.borderWidth = 1
         imageProfile.layer.masksToBounds = true
@@ -28,8 +29,6 @@ class UpdateProfileVC: UIViewController {
         imageProfile.clipsToBounds = true
         nameUser.customTextfield()
         nameUser.frame = CGRect(x: 0, y: 0, width: 0, height:50)
-//        Bio.customTextfield()
-//        Bio.frame = CGRect(x: 0, y: 0, width: 0, height:50)
         JobTitle.customTextfield()
         JobTitle.frame = CGRect(x: 0, y: 0, width: 0, height:50)
         website.customTextfield()
@@ -72,9 +71,9 @@ class UpdateProfileVC: UIViewController {
         
         
     }
-        
-
-        
+    
+    
+    
     
     
     func loadData(){
