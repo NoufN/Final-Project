@@ -20,6 +20,15 @@
 
 
 
+### Screenshots :
+![Uploa<img width="193" alt="Screen Shot 2022-01-20 at 4 15 04 PM" src="https://user-images.githubusercontent.com/92252933/150346641-1f18d646-4ee0-48c1-9761-ecb69fa6a0e0.png">
+<img width="212" alt="Screen Shot 2022-01-20 at 4 12 42 PM" src="https://user-images.githubusercontent.com/92252933/150346701-be06713a-228f-4add-a59e-272f3c4b3efb.png">
+ <img width="209" alt="Screen Shot 2022-01-20 at 4 12 52 PM" src="https://user-images.githubusercontent.com/92252933/150346715-4bfd5c85-3662-4f98-9067-d95e8d4ca7bb.png">
+<img width="205" alt="Screen Shot 2022-01-20 at 4 14 39 PM" src="https://user-images.githubusercontent.com/92252933/150346730-58f7e389-81f6-4116-8c73-814a1ce19c0b.png">
+<img width="216" alt="Screen Shot 2022-01-20 at 4 10 42 PM" src="https://user-images.githubusercontent.com/92252933/150346669-fa5553e7-db12-4138-a977-b576725435c4.png">
+<img width="211" alt="Screen Shot 2022-01-20 at 4 12 23 PM" src="https://user-images.githubusercontent.com/92252933/150346686-3b5aa430-b7ef-4734-ad4b-19ef39a630fe.png">
+ding Screen Shot 2022-01-20 at 4.08.38 PM.png…]()
+
 
 
 ### Demo of app :
