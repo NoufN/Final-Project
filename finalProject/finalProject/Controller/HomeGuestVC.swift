@@ -28,15 +28,7 @@ class HomeGuestVC: UIViewController ,  UICollectionViewDelegate, UICollectionVie
         collectionView.dataSource = self
         searchBar.delegate = self
         self.filteredData = self.projects
-//        if projects.isEmpty {
-//            collectionView.isHidden = true
-//            var label = UILabel(frame: CGRect(x: 0, y: 0,width: collectionView.layer.bounds.width , height: collectionView.layer.bounds.height))
-//
-//            label.text = "حدث خطاء"
-//
-//
-//
-//        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
