@@ -73,4 +73,4 @@ Developed using xCode 13.0 and Swift 5
 - [lucid](https://lucid.app)
 - [fonts google](https://fonts.google.com)
 - [Firebase Docs](https://firebase.google.com/?gclid=EAIaIQobChMIhqKx7dDA9QIVGYXVCh2R0wTHEAAYASAAEgIwovD_BwE&gclsrc=aw.ds)
-- 
+
